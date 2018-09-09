@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   padding: 25px 0;
-  background-color: $green;
+  background-color: #ff698e;
 }
 .card {
   width: 65%;

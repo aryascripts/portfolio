@@ -19,24 +19,23 @@
 <style scoped lang="scss">
 @import './../sass/vars.scss';
 
-.nav-items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 6vh;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .nav {
   width: 100%;
   height: 6vh;
-  // background-color: $green-light;
-
   position: fixed;
   top: 0;
+  z-index: $nav-z;
+
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 .item {
