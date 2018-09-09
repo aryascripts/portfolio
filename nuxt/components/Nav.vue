@@ -33,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
     height: 6vh;
-    max-width: 800px;
+    max-width: $nav-max-width;
     margin: 0 auto;
   }
 }

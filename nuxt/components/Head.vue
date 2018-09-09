@@ -84,9 +84,4 @@
   flex-direction: column;
   align-items: center;
 }
-
-@keyframes appear {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
 </style>
