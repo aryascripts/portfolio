@@ -2,10 +2,10 @@
   <div>
     <div class="nav">
       <div class="section nav-items">
-        <div class="pointer item">home</div>
-        <div class="pointer item">work</div>
-        <div class="pointer item">about</div>
-        <div class="pointer item">connect</div>
+        <nuxt-link to="/" class="pointer item">home</nuxt-link>
+        <nuxt-link to="/work" class="pointer item">work</nuxt-link>
+        <nuxt-link to="/about" class="pointer item">about</nuxt-link>
+        <nuxt-link to="/connect" class="pointer item">connect</nuxt-link>
       </div>
     </div>
     <nuxt/>
@@ -89,6 +89,7 @@ html {
   line-height: 6vh;
   padding: 0 15px;
   position: relative;
+  text-decoration: none;
 
   transition: color 150ms ease-in-out;
 
