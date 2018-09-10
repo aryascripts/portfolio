@@ -1,5 +1,5 @@
 <template>
-  <div class="head-section">
+  <div v-smooth-load="'./../static/fuzzy.jpg'" ref="headSection" class="head-section">
 
     <div class="pic-info">
         <div class="circle-border">
@@ -13,7 +13,31 @@
 </template>
 
 <script>
-  export default { }
+  export default {
+    methods: {
+      loadImage: (headSection) => {
+        // console.log(headSection);
+        // const src = headSection.style.background;
+        // console.log(src);
+        // const url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+        // const img = new Image();
+        //
+        // img.onload = () => {
+        //   alert('image loaded');
+        // }
+        //
+        // img.src = url;
+      }
+    },
+    data() {
+      return {
+        loaded: false
+      }
+    },
+    mounted() {
+      this.loadImage(this.$refs.headSection);
+    }
+  }
 </script>
 
 

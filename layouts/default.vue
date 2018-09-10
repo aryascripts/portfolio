@@ -13,6 +13,7 @@
 </template>
 
 <style lang="scss">
+@import './../sass/global.scss';
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -92,7 +93,7 @@ html {
   transition: color 150ms ease-in-out;
 
   &:hover {
-    color: $green-light;
+    color: darken($green-light, 10%);
   }
 }
 </style>

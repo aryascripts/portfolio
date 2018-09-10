@@ -21,6 +21,11 @@ module.exports = {
   /*
   ** Build configuration
   */
+
+  plugins: [
+    '~/plugins/directives.js'
+  ],
+
   build: {
     /*
     ** Run ESLint on save
