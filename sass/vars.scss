@@ -1,7 +1,7 @@
 $green: #06a77d;
 $green-light: #f1ffe7;
 $dark-gray: #2e3532;
-
+$pink: #ff698e;
 
 
 // Z-INDEX
@@ -17,4 +17,11 @@ $nav-max-width: 800px;
 @keyframes appear {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+
+@mixin boxShadow($val) {
+  -webkit-box-shadow: $val;
+  -moz-box-shadow: $val;
+  box-shadow: $val;
 }

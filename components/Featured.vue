@@ -34,7 +34,7 @@ export default {
   align-items: center;
   justify-content: center;
   padding-bottom: 10vh;
-  background-color: #ff698e;
+  background-color: $pink;
 }
 .card {
   width: 65%;
