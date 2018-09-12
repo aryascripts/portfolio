@@ -35,6 +35,7 @@ export default {
     background-color: $green-light;
     border-radius: 25px;
     position: relative;
+    margin-top: 40px;
 
     @include boxShadow(0px 0px 9px 0px rgba(0,0,0,0.10));
     transition: 300ms box-shadow ease;
@@ -83,6 +84,7 @@ export default {
     font-weight: 300;
     letter-spacing: 0px;
     flex-grow: 1;
+    overflow: hidden;
   }
 
   .date {
