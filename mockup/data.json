@@ -1,5 +1,11 @@
 {
   "site": "Aman Bhimani: Portfolio",
+  "collections": [
+    {
+      "name":"Computer Science & Engineering",
+      "key":"science-engineering"
+    }
+  ],
   "projects": [
     {
       "id":"",
@@ -9,7 +15,11 @@
       "description":"",
       "skills":"",
       "images":"",
-      "participants":""
+      "participants":"",
+      "links": {
+        "repository": "",
+        "documents": ""
+      }
     }
   ],
   "timeline": {

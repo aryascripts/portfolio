@@ -11,7 +11,6 @@
   </div>
 </template>
 
-
 <script>
 import Card from './../components/Card.vue'
 import Collection from './../components/Collection.vue'
@@ -53,9 +52,7 @@ export default {
     }
   }
 }
-
 </script>
-
 
 <style scoped lang="scss">
 @import './../sass/vars.scss';

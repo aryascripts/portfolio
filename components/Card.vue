@@ -30,12 +30,12 @@ export default {
 <style scoped lang="scss">
 @import './../sass/vars.scss';
   .card {
-    width: 220px;
+    width: 375px;
     height: 330px;
     background-color: $green-light;
     border-radius: 25px;
     position: relative;
-    margin-top: 40px;
+    margin-top: 55px;
 
     @include boxShadow(0px 0px 9px 0px rgba(0,0,0,0.10));
     transition: 300ms box-shadow ease;
@@ -46,7 +46,7 @@ export default {
 
     .pic {
       width: 80%;
-      height: 55%;
+      height: 35%;
       background-color: white;
       border-radius: 20px;
       position: absolute;
@@ -66,7 +66,7 @@ export default {
   .content {
     display: flex;
     flex-direction: column;
-    padding: 70% 15px 15px 15px;
+    padding: 25% 15px 15px 15px;
     height: 100%;
   }
 

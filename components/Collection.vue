@@ -10,7 +10,6 @@
   </div>
 </template>
 
-
 <script>
 import Card from './Card.vue'
 
@@ -20,11 +19,10 @@ export default {
   },
   props: ['projects'],
   mounted() {
-    console.log(this.projects);
+
   }
 }
 </script>
-
 
 <style scoped lang="scss">
 @import './../sass/vars.scss';
