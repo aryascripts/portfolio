@@ -32,12 +32,15 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 45px;
+  // margin-top: -25px;
+  //
+  // &:first-child {
+  //   margin-top: 0px;
+  // }
+
 
   width: 100%;
-}
-
-.card {
-  margin: 10px;
 }
 
 </style>

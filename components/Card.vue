@@ -1,8 +1,5 @@
 <template>
-  <div class="card pointer">
-    <div class="pic">
-
-    </div>
+  <div v-bind:style="{backgroundColor: cardColor}" ref="cardRef" class="card">
 
     <div class="content">
       <div class="name">
@@ -22,7 +19,24 @@
 
 <script>
 export default {
-  props: ['name', 'description', 'date']
+  props: [
+    'name',
+    'description',
+    'date',
+    'bgColor'
+  ],
+  methods: {
+    getRandomColor() {
+      const randomPastel = `hsl(${360 * Math.random()}, ${(25 + 70 * Math.random())}%, ${(85 + 10 * Math.random())}%)`
+      return randomPastel;
+    }
+  },
+  data() {
+    const color = this.getRandomColor();
+    return {
+      cardColor: color
+    }
+  }
 }
 
 </script>
@@ -30,43 +44,45 @@ export default {
 <style scoped lang="scss">
 @import './../sass/vars.scss';
   .card {
-    width: 375px;
+    width: 100%;
     height: 330px;
     background-color: $green-light;
     border-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     position: relative;
-    margin-top: 55px;
+    margin-top: -45px;
 
     @include boxShadow(0px 0px 9px 0px rgba(0,0,0,0.10));
-    transition: 300ms box-shadow ease;
+    transition: 300ms box-shadow ease, 3s background-color ease;
 
     &:hover {
-      @include boxShadow(0px 3px 11px 0px rgba(0,0,0,0.35));
+      @include boxShadow(0px 3px 15px 0px rgba(0,0,0,0.55));
     }
 
-    .pic {
-      width: 80%;
-      height: 35%;
-      background-color: white;
-      border-radius: 20px;
-      position: absolute;
-      margin-top: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      @include boxShadow(0px 3px 9px 0px rgba(0,0,0,0.20));
-      transition: 300ms box-shadow ease;
-
-      &:hover {
-        @include boxShadow(0px 3px 9px 0px rgba(0,0,0,0.35));
-      }
-    }
+    // .pic {
+    //   width: 80%;
+    //   height: 35%;
+    //   background-color: white;
+    //   border-radius: 20px;
+    //   position: absolute;
+    //   margin-top: -40px;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //
+    //   @include boxShadow(0px 3px 9px 0px rgba(0,0,0,0.20));
+    //   transition: 300ms box-shadow ease;
+    //
+    //   &:hover {
+    //     @include boxShadow(0px 3px 9px 0px rgba(0,0,0,0.35));
+    //   }
+    // }
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    padding: 25% 15px 15px 15px;
+    padding: 15px;
     height: 100%;
   }
 
