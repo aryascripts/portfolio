@@ -45,7 +45,7 @@ export default {
 @import './../sass/vars.scss';
   .card {
     width: 100%;
-    height: 330px;
+    min-height: 100px;
     background-color: $green-light;
     border-radius: 25px;
     border-bottom-left-radius: 0px;
@@ -59,30 +59,12 @@ export default {
     &:hover {
       @include boxShadow(0px 3px 15px 0px rgba(0,0,0,0.55));
     }
-
-    // .pic {
-    //   width: 80%;
-    //   height: 35%;
-    //   background-color: white;
-    //   border-radius: 20px;
-    //   position: absolute;
-    //   margin-top: -40px;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //
-    //   @include boxShadow(0px 3px 9px 0px rgba(0,0,0,0.20));
-    //   transition: 300ms box-shadow ease;
-    //
-    //   &:hover {
-    //     @include boxShadow(0px 3px 9px 0px rgba(0,0,0,0.35));
-    //   }
-    // }
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 15px #{$card-overlap+5} 15px;
     height: 100%;
   }
 
@@ -95,7 +77,6 @@ export default {
   }
 
   .description {
-    text-align: center;
     font-family: 'Helvetica', 'Verdana', sans-serif;
     font-weight: 300;
     letter-spacing: 0px;

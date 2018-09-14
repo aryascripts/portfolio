@@ -69,7 +69,6 @@ export default {
 .content {
   width: 100%;
   max-width: $nav-max-width;
-
   margin: 0 auto;
 }
 </style>

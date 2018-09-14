@@ -32,13 +32,7 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 45px;
-  // margin-top: -25px;
-  //
-  // &:first-child {
-  //   margin-top: 0px;
-  // }
-
+  margin-top: $card-overlap;
 
   width: 100%;
 }

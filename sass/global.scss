@@ -7,8 +7,19 @@ h1 {
   font-weight: 200;
   text-transform: uppercase;
   color: $green-light;
-  margin: 15px 0 5px 0;
+  padding: 0 0 10px 0;
   span {
     font-size: 26px;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: $nav-max-width;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.background {
+  width: 100%;
 }
