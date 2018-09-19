@@ -1,5 +1,8 @@
 <template>
-  <div v-bind:style="{backgroundColor: cardColor}" ref="cardRef" class="card">
+  <div
+    v-bind:style="{backgroundColor: cardColor}"
+    ref="cardRef"
+    class="card">
 
     <div class="content">
       <div class="name">
@@ -74,6 +77,7 @@ export default {
     font-weight: 500;
     letter-spacing: 0px;
     text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   .description {
