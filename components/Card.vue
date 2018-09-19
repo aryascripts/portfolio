@@ -5,10 +5,10 @@
       <div class="name">
         {{ name }}
       </div>
-      <div class="description">
+      <div class="para description">
         {{ description }}
       </div>
-      <div class="date">
+      <div class="para date">
         {{ date }}
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
     width: 100%;
     min-height: 100px;
     background-color: $green-light;
-    border-radius: 25px;
+    border-radius: $card-radius;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     position: relative;

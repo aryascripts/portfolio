@@ -35,6 +35,10 @@ export default {
   margin-top: $card-overlap;
 
   width: 100%;
+
+  .card:last-child {
+    border-radius: $card-radius;
+  }
 }
 
 </style>
