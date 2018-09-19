@@ -11,7 +11,6 @@
         ['technology', 'web development', 'design', 'animals', 'video-games', 'reading', 'science', 'driving', 'music', 'driving with music'];
       </div>
     </div>
-
   </div>
 </template>
 
@@ -57,7 +56,7 @@
 
   .code {
     font-family: 'Courier New', monospace;
-    font-size: 1.8vmax;
+    font-size: 12pt;
     font-weight: 600;
     text-align: center;
     max-width: $max-footer;
