@@ -6,13 +6,14 @@
 
     <div class="content">
       <div class="name">
-        {{ name }}
+        {{ project.name }}
       </div>
       <div class="para description">
-        {{ description }}
+        {{ project.description }}
       </div>
+      <div v-html="post" class="para post"></div>
       <div class="para date">
-        {{ date }}
+        {{ project.date }}
       </div>
     </div>
 
@@ -21,23 +22,31 @@
 </template>
 
 <script>
+import { getPost } from './../content'
+
 export default {
   props: [
-    'name',
-    'description',
-    'date',
-    'bgColor'
+    'project'
   ],
   methods: {
     getRandomColor() {
       const randomPastel = `hsl(${360 * Math.random()}, ${(25 + 70 * Math.random())}%, ${(85 + 10 * Math.random())}%)`
       return randomPastel;
-    }
+    },
+    async getMarkdownContent() {
+      const file = this.$axios.$get('./static/posts/viewtube.md');
+      console.log(file);
+    },
   },
   data() {
     const color = this.getRandomColor();
     return {
       cardColor: color
+    }
+  },
+  computed: {
+    post() {
+      return getPost(this.project.md_file)
     }
   }
 }
@@ -64,6 +73,11 @@ export default {
     }
   }
 
+  %font {
+    font-family: 'Helvetica', 'Verdana', sans-serif;
+    font-weight: 300;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -72,26 +86,30 @@ export default {
   }
 
   .name {
+    @extend %font;
     text-align: center;
-    font-family: 'Helvetica', 'Verdana', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0px;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
 
   .description {
-    font-family: 'Helvetica', 'Verdana', sans-serif;
-    font-weight: 300;
+    @extend %font;
+
     letter-spacing: 0px;
     flex-grow: 1;
     overflow: hidden;
   }
 
+  .post {
+    @extend .description;
+  }
+
   .date {
+    @extend %font;
+
     text-align: right;
-    font-family: 'Helvetica', 'Verdana', sans-serif;
-    font-weight: 300;
     letter-spacing: 0px;
     align-self: flex-end;
   }

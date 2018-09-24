@@ -25,8 +25,8 @@ export default {
       projects: [{
           id: '1',
           name: 'ViewTube',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nibh egestas, malesuada sem at, pellentesque lacus. Nulla porta elementum ipsum quis gravida. Nam vestibulum et nulla a faucibus. Quisque odio urna, hendrerit id rutrum ac, porttitor ut justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus arcu elit, tincidunt eu feugiat nec, finibus at libero. Proin mi lacus, pulvinar in vehicula nec, tempor ut diam. Aliquam erat volutpat. Cras malesuada elementum congue. Cras nec scelerisque orci. Phasellus ac iaculis diam, eget dictum orci. Nulla cursus faucibus condimentum. Sed faucibus mi a nibh volutpat, nec posuere tortor vestibulum. Pellentesque consequat rutrum ex, eget vehicula dui venenatis non. Ut metus massa, placerat ut faucibus eget, luctus vel ante. Nulla sagittis placerat turpis, eget porttitor metus eleifend ut.',
-          date: '2018-04-01'
+          date: '2018-04-01',
+          md_file: 'viewtube'
         }, {
           id: '2',
           name: 'Project Two',

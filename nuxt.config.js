@@ -13,8 +13,6 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Trochut'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Imprima'}
-
-
     ]
   },
   /*
@@ -28,6 +26,13 @@ module.exports = {
   plugins: [
     '~/plugins/directives.js'
   ],
+  modules: [
+    '@nuxtjs/markdownit',
+    '@nuxtjs/axios'
+  ],
+  markdownit: {
+    'injected': true
+  },
 
   build: {
     /*

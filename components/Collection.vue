@@ -4,9 +4,7 @@
       class="card"
       v-for="p in projects"
       v-bind:key="p.id"
-      v-bind:name="p.name"
-      v-bind:description="p.description"
-      v-bind:date="p.date" />
+      v-bind:project="p"/>
   </div>
 </template>
 
