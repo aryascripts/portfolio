@@ -1,0 +1,129 @@
+{
+  "collections": [
+    {
+      "name":"Computer Science & Engineering",
+      "key":"science-engineering"
+    }
+  ],
+  "projects": [
+    { "name":"ViewTube",
+      "md_file":"viewtube",
+      "featured":true,
+      "type":"Personal",
+      "date": {
+        "start": 1498867200,
+        "end": null
+      },
+      "collection":"science-engineering",
+      "skills":[
+        "Angular 5",
+        "TypeScript",
+        "NodeJS"],
+      "participants":"",
+      "links": {
+        "repository": "https://github.com/amanb014/viewtube",
+        "live_demo": "",
+        "documents": ""
+      },
+      "images": [
+        "~static/images/viewtube1.png",
+        "~static/images/viewtube2.png",
+        "~static/images/viewtube3.png"
+      ]
+    },
+    { "name":"Minesweeper",
+      "md_file":"minesweeper",
+      "featured":true,
+      "type":"Personal",
+      "date": {
+        "start": 1496365200,
+        "end": 1496365200
+      },
+      "collection":"science-engineering",
+      "skills":[
+        "Javascript",
+        "HTML 5",
+        "CSS 3",
+        "Programming"],
+      "participants":"",
+      "links": {
+        "repository": "https://github.com/amanb014/Minesweeper",
+        "live_demo": "http://amanbhimani.com/minesweeper/",
+        "documents": ""
+      },
+      "images": [
+        "~static/images/minesweeper1.png",
+        "~static/images/minesweeper2.png",
+        "~static/images/minesweeper3.png"
+      ]
+    },
+    { "name":"Connect 4",
+      "md_file":"connect4",
+      "featured":true,
+      "type":"Personal",
+      "date": {
+        "start": 1491094800,
+        "end": 1491094800
+      },
+      "collection":"science-engineering",
+      "skills":[
+        "Javascript",
+        "HTML 5",
+        "CSS 3",
+        "Programming"],
+      "participants":"",
+      "links": {
+        "repository": "https://github.com/amanb014/connect4",
+        "live_demo": "http://amanbhimani.com/connect4/",
+        "documents": ""
+      },
+      "images": [
+        "~static/images/connect41.png",
+        "~static/images/connect42.png",
+        "~static/images/connect43.png"
+      ]
+    }
+  ],
+  "timeline": [
+    { "event": "",
+			"year": "1995",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "1995",
+			"description": ""
+		},
+		{ "event": "",
+      "year": "1999",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "2000",
+			"description": ""
+		},
+		{	"event": "",
+			"year": "2008",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "2009",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "2012",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "2014",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "2015",
+			"description": ""
+		},
+		{ "event": "",
+			"year": "2017",
+			"description": ""
+		}
+  ]
+}

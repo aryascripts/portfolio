@@ -8,10 +8,9 @@
       <div class="name">
         {{ project.name }}
       </div>
-      <div class="para description">
-        {{ project.description }}
-      </div>
+
       <div v-html="post" class="para post"></div>
+
       <div class="para date">
         {{ project.date }}
       </div>
@@ -22,7 +21,7 @@
 </template>
 
 <script>
-import { getPost } from './../content'
+import SiteData from './../content'
 
 export default {
   props: [
@@ -35,7 +34,6 @@ export default {
     },
     async getMarkdownContent() {
       const file = this.$axios.$get('./static/posts/viewtube.md');
-      console.log(file);
     },
   },
   data() {
@@ -46,7 +44,7 @@ export default {
   },
   computed: {
     post() {
-      return getPost(this.project.md_file)
+      return SiteData.getPost(this.project.md_file)
     }
   }
 }
@@ -88,10 +86,11 @@ export default {
   .name {
     @extend %font;
     text-align: center;
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-weight: 100;
+    letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-size: 24px;
   }
 
   .description {
@@ -112,5 +111,6 @@ export default {
     text-align: right;
     letter-spacing: 0px;
     align-self: flex-end;
+    margin: 15px 0;
   }
 </style>

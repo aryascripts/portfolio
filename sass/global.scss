@@ -7,7 +7,7 @@
   font-weight: 200;
 }
 
-  h1 {
+h1 {
   @extend %font;
 
   text-transform: uppercase;
@@ -23,6 +23,11 @@ h2 {
   text-transform: uppercase;
   font-weight: 500;
   margin-top: 12px;
+}
+
+hr {
+  opacity: 0.2;
+  margin: 18px 0;
 }
 
 .container {
