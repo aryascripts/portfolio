@@ -40,7 +40,6 @@ export default {
                             collection.projects = SiteData.getProjectsForCollection(key);
                             return collection;
                           });
-    console.log(this.collections);
   }
 }
 </script>
