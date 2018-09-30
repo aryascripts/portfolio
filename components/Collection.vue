@@ -30,7 +30,6 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: $card-overlap;
 
   width: 100%;
@@ -38,6 +37,11 @@ export default {
   .card:last-child {
     border-radius: $card-radius;
   }
+}
+
+h1 {
+  margin-top: -28px;
+  margin-bottom: 42px;
 }
 
 </style>

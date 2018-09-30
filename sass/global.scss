@@ -13,9 +13,10 @@ h1 {
   text-transform: uppercase;
   color: $green-light;
   padding: 0 0 10px 0;
-  span {
-    font-size: 26px;
-  }
+}
+
+h1::first-letter {
+  font-size: 26px;
 }
 
 h2 {
