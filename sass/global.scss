@@ -58,3 +58,11 @@ ul {
 .router-link-active {
   color: $green-hover;
 }
+
+
+.page-enter-active, .page-leave-active {
+  @include transition(opacity 300ms);
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
