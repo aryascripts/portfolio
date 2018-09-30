@@ -12,7 +12,9 @@
       <div v-html="post" class="para post"></div>
 
       <div class="para date">
-        {{ project.date }}
+        {{ getReadableDate(project.date.start) }}
+        --
+        {{ project.date.end ? getReadableDate(project.date.end) : 'current' }}
       </div>
     </div>
 
@@ -22,6 +24,7 @@
 
 <script>
 import SiteData from './../utils/content'
+import { getReadableDate } from './../utils/functions'
 
 export default {
   props: [
@@ -34,7 +37,7 @@ export default {
     },
     async getMarkdownContent() {
       const file = this.$axios.$get('./static/posts/viewtube.md');
-    },
+    }
   },
   data() {
     const color = this.getRandomColor();
@@ -46,6 +49,9 @@ export default {
     post() {
       return SiteData.getPost(this.project.md_file)
     }
+  },
+  beforeCreate() {
+    this.getReadableDate = getReadableDate;
   }
 }
 
@@ -79,7 +85,7 @@ export default {
   .content {
     display: flex;
     flex-direction: column;
-    padding: 15px 15px #{$card-overlap+5} 15px;
+    padding: 15px 15px #{$card-overlap+25} 15px;
     height: 100%;
   }
 

@@ -11,7 +11,7 @@
       "featured":true,
       "type":"Personal",
       "date": {
-        "start": 1498867200,
+        "start": 1498867200000,
         "end": null
       },
       "collection":"science-engineering",
@@ -36,8 +36,8 @@
       "featured":true,
       "type":"Personal",
       "date": {
-        "start": 1496365200,
-        "end": 1496365200
+        "start": 1496365200000,
+        "end": 1496365200000
       },
       "collection":"science-engineering",
       "skills":[
@@ -62,8 +62,8 @@
       "featured":true,
       "type":"Personal",
       "date": {
-        "start": 1491094800,
-        "end": 1491094800
+        "start": 1491094800000,
+        "end": 1491094800000
       },
       "collection":"science-engineering",
       "skills":[
