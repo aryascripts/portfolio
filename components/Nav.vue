@@ -3,10 +3,14 @@
     v-bind:class="{ 'trans-gray': darkNav }"
     class="nav">
     <div class="section nav-items">
-      <nuxt-link to="/" class="pointer item">home</nuxt-link>
-      <nuxt-link to="/work" class="pointer item">work</nuxt-link>
-      <nuxt-link to="/about" class="pointer item">about</nuxt-link>
-      <nuxt-link to="/connect" class="pointer item">connect</nuxt-link>
+      <nuxt-link to="/" exact
+        class="pointer item">home</nuxt-link>
+      <nuxt-link to="/work" exact
+        class="pointer item">work</nuxt-link>
+      <nuxt-link to="/about" exact
+        class="pointer item">about</nuxt-link>
+      <nuxt-link to="/connect" exact
+        class="pointer item">connect</nuxt-link>
     </div>
 
   </div>
@@ -74,7 +78,7 @@ export default {
   transition: color 150ms ease-in-out;
 
   &:hover {
-    color: $pink;
+    color: $green-hover;
   }
 }
 

@@ -3,8 +3,12 @@
 
     <div class="cs">
       <div class="content">
-        <h1><span>c</span>omputer <span>s</span>cience & <span>E</span>ngineering</h1>
-        <Collection v-bind:projects="projects" />
+        <Collection
+          v-for="col in collections"
+          v-bind:projects="col.projects"
+          v-bind:name="col.name"
+          v-bind:key="col.key" />
+
       </div>
     </div>
 
@@ -14,42 +18,29 @@
 <script>
 import Card from './../components/Card.vue'
 import Collection from './../components/Collection.vue'
+import SiteData from './../utils/content.js'
 
 export default {
   components: {
     Card,
     Collection
   },
+  methods: {
+
+  },
   data() {
     return {
-      projects: [{
-          id: '1',
-          name: 'ViewTube',
-          description: 'YouTube Playlist management application for desktop platforms',
-          date: '2018-04-01'
-        }, {
-          id: '2',
-          name: 'Project Two',
-          description: 'Another application that I worked on in the past',
-          date: '2018-04-01'
-        }, {
-          id: '3',
-          name: 'Project Tres',
-          description: 'Yet another application that I have finished or working on',
-          date: '2018-04-01'
-        }, {
-          id: '2',
-          name: 'Project Two',
-          description: 'Another application that I worked on in the past',
-          date: '2018-04-01'
-        }, {
-          id: '3',
-          name: 'Project Tres',
-          description: 'Yet another application that I have finished or working on',
-          date: '2018-04-01'
-        }
-      ]
+        collections: [],
     }
+  },
+  created() {
+    this.collections = SiteData.getCollections()
+                          .map(collection => {
+                            const key = collection.key;
+                            collection.projects = SiteData.getProjectsForCollection(key);
+                            return collection;
+                          });
+    console.log(this.collections);
   }
 }
 </script>

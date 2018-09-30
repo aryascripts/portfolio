@@ -1,5 +1,9 @@
 <template>
   <div class="collection">
+
+    <h1>{{ name }}</h1>
+
+    <!-- <h1><span>c</span>omputer <span>s</span>cience & <span>E</span>ngineering</h1> -->
     <Card
       class="card"
       v-for="p in projects"
@@ -15,10 +19,7 @@ export default {
   components: {
     Card
   },
-  props: ['projects'],
-  mounted() {
-
-  }
+  props: ['projects', 'name']
 }
 </script>
 
