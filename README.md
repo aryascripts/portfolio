@@ -8,3 +8,5 @@ Currently this only includes a static website (html & css). The technology used 
 - [ ] Work page lists out all portfolio projects in categories
 - [ ] Create image gallery for viewing images
 - [ ] Thumbnail vs no Thumbnail for images
+- [ ] Collection loop to go through projects
+- [ ] 

@@ -74,7 +74,7 @@ export default {
   transition: color 150ms ease-in-out;
 
   &:hover {
-    color: darken($green-light, 10%);
+    color: $pink;
   }
 }
 
