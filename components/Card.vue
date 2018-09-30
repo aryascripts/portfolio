@@ -1,7 +1,6 @@
 <template>
   <div
     v-bind:style="{backgroundColor: cardColor}"
-    ref="cardRef"
     class="card">
 
     <div class="content">
@@ -34,9 +33,6 @@ export default {
     getRandomColor() {
       const randomPastel = `hsl(${360 * Math.random()}, ${(25 + 70 * Math.random())}%, ${(85 + 10 * Math.random())}%)`
       return randomPastel;
-    },
-    async getMarkdownContent() {
-      const file = this.$axios.$get('./static/posts/viewtube.md');
     }
   },
   data() {

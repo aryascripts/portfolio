@@ -1,13 +1,7 @@
 <template>
   <div>
-    <div class="nav">
-      <div class="section nav-items">
-        <nuxt-link to="/" class="pointer item">home</nuxt-link>
-        <nuxt-link to="/work" class="pointer item">work</nuxt-link>
-        <nuxt-link to="/about" class="pointer item">about</nuxt-link>
-        <nuxt-link to="/connect" class="pointer item">connect</nuxt-link>
-      </div>
-    </div>
+
+    <Nav />
     <nuxt/>
 
     <Footer />
@@ -17,12 +11,13 @@
 
 <script>
 import Footer from './../components/Footer.vue'
+import Nav from './../components/Nav.vue'
 export default {
   components: {
-    Footer
+    Footer,
+    Nav
   }
 }
-
 </script>
 
 
@@ -71,44 +66,5 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
-
-
-@import './../sass/vars.scss';
-
-.nav {
-  width: 100%;
-  height: 6vh;
-  position: fixed;
-  top: 0;
-  z-index: $nav-z;
-
-  .nav-items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 6vh;
-    max-width: $nav-max-width;
-    margin: 0 auto;
-  }
-}
-
-.item {
-  font-size: 2.5vmax;
-  font-family: 'Arial Black', sans-serif;
-  color: $green-light;
-  height: 6vh;
-  line-height: 6vh;
-  padding: 0 15px;
-  position: relative;
-  text-decoration: none;
-
-  transition: color 150ms ease-in-out;
-
-  &:hover {
-    color: darken($green-light, 10%);
-  }
 }
 </style>

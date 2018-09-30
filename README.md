@@ -3,6 +3,7 @@ Currently this only includes a static website (html & css). The technology used 
 
 ## Checklist
 - [x] Dates converted to human-readable formats
+- [x] Transparent gray background on nav when scrolling down
 - [ ] Dynamic quotes on home page with content.js
 - [ ] Work page lists out all portfolio projects in categories
 - [ ] Create image gallery for viewing images

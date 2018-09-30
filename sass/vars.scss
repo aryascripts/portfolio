@@ -30,3 +30,9 @@ $card-overlap: 45px;
   -moz-box-shadow: $val;
   box-shadow: $val;
 }
+@mixin transition($def) {
+  -webkit-transition: $def;
+  -moz-transition: $def;
+  -o-transition: $def;
+  transition: $def;
+}
