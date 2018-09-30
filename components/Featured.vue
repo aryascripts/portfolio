@@ -14,7 +14,7 @@
 <script>
 import Quotes from './Quotes.vue'
 import Collection from './Collection.vue'
-import SiteData from './../content'
+import SiteData from './../utils/content'
 
 export default {
   components: {

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import SiteData from './../content'
+import SiteData from './../utils/content'
 
 export default {
   props: [

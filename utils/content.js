@@ -1,15 +1,15 @@
 import site_json from './content.json'
 
-import viewtube from './static/posts/viewtube.md'
-import minesweeper from './static/posts/minesweeper.md'
-import connect4 from './static/posts/connect4.md'
+import viewtube from '../static/posts/viewtube.md'
+import minesweeper from '../static/posts/minesweeper.md'
+import connect4 from '../static/posts/connect4.md'
 
 const site_data = JSON.parse(JSON.stringify(site_json))
 
 const posts = {
   'viewtube': viewtube,
   'minesweeper': minesweeper,
-  'connect4': connect4 
+  'connect4': connect4
 }
 
 export default {
