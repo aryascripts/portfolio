@@ -1,6 +1,6 @@
 <template>
-  <div v-smooth-load="'./../static/fuzzy.jpg'" ref="headSection" class="head-section">
 
+  <div class="head-section">
     <div class="pic-info">
         <div class="circle-border">
           <div class="circle-background"></div>
@@ -13,31 +13,7 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      loadImage: (headSection) => {
-        // console.log(headSection);
-        // const src = headSection.style.background;
-        // console.log(src);
-        // const url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
-        // const img = new Image();
-        //
-        // img.onload = () => {
-        //   alert('image loaded');
-        // }
-        //
-        // img.src = url;
-      }
-    },
-    data() {
-      return {
-        loaded: false
-      }
-    },
-    mounted() {
-      this.loadImage(this.$refs.headSection);
-    }
-  }
+  export default { }
 </script>
 
 
@@ -107,5 +83,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.head-section[lazy=loading] {
+  opacity: 0;
+}
+.head-section[lazy=error] {
+
+}
+.head-section[lazy=loaded] {
+  opacity: 1;
 }
 </style>
