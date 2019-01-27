@@ -38,7 +38,7 @@ export default {
   padding: 0px 15px 0 15px;
 }
 .background {
-  background-color: $pink;
+  background-color: $background;
 }
 
 </style>

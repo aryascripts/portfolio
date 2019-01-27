@@ -84,6 +84,9 @@
       ]
     }
   ],
+  "about": {
+    "about_me": "Hello there! My name is Aman Bhimani, and you've just found my little corner of the internet. On this side, you will find the latest and the greatest that I have been working on. Below are my interets, and how this corner came to be.<br/><br/>Below are some of the books that I have been reading, and some of my favorites. Please don't hesitate to ask me about any of this information - personal or professional. See you around in your corner!"
+  },
   "timeline": [
     { "event": "",
 			"year": "1995",

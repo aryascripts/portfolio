@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="project"
     v-bind:style="{backgroundColor: cardColor}"
     class="card">
 
@@ -16,7 +17,17 @@
         {{ project.date.end ? getReadableDate(project.date.end) : 'current' }}
       </div>
     </div>
+  </div>
 
+  <div
+    v-else-if="text"
+    v-bind:style="{backgroundColor: cardColor}"
+    class="card rounded">
+
+    <div
+      v-html="text"
+      class="content textonly">
+    </div>
   </div>
 
 </template>
@@ -27,7 +38,8 @@ import { getReadableDate } from './../utils/functions'
 
 export default {
   props: [
-    'project'
+    'project',
+    'text'
   ],
   methods: {
     getRandomColor() {
@@ -114,5 +126,12 @@ export default {
     letter-spacing: 0px;
     align-self: flex-end;
     margin: 15px 0;
+  }
+
+  .rounded {
+    border-radius: $card-radius;
+  }
+  .textonly {
+    padding: 15px;
   }
 </style>

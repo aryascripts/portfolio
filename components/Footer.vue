@@ -33,7 +33,7 @@
 
   .footer {
     width: 100%;
-    background-color: $pink;
+    background-color: $background;
     z-index: 10;
     padding: 20px 20px 30px 20px;
 

@@ -20,5 +20,6 @@ export default {
             .filter(project => project.collection === collection)
   },
   getTimeline: () => site_data.timeline,
-  getFeaturedProjects: () => site_data.projects.filter(project => project.featured)
+  getFeaturedProjects: () => site_data.projects.filter(project => project.featured),
+  getAboutMessage: () => site_data.about.about_me
 }

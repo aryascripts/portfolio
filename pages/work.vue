@@ -52,13 +52,7 @@ export default {
 }
 
 .cs {
-  background-color: $pink;
+  background-color: $background;
   padding: 6vh 20px 0 20px;
-}
-
-.content {
-  width: 100%;
-  max-width: $nav-max-width;
-  margin: 0 auto;
 }
 </style>
