@@ -29,7 +29,7 @@
 
 .name, .title {
   font-family: 'verdana', sans-serif;
-  color: $green-light;
+  color: $dots-border;
   width: auto;
   text-align: left;
   animation: 1s ease-in-out 700ms 1 normal both running appear;
@@ -46,7 +46,7 @@
   width: 200px;
   height: 200px;
   border-radius: 200px;
-  border: 4px dotted $green-light;
+  border: 4px dotted $dots-border;
   position: relative;
   margin: -50px auto 0 auto;
 
@@ -68,11 +68,6 @@
 .head-section {
   width: 100%;
   height: 90vh;
-  background: url('./../static/fuzzy.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 
   display: flex;
   flex-direction: column;

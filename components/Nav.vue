@@ -1,36 +1,32 @@
 <template lang="html">
-  <div
-    v-bind:class="{ 'trans-gray': darkNav }"
-    class="nav">
-    <div class="section nav-items">
-      <nuxt-link to="/" exact
-        class="pointer item">home</nuxt-link>
-      <nuxt-link to="/work" exact
-        class="pointer item">work</nuxt-link>
-      <nuxt-link to="/about" exact
-        class="pointer item">about</nuxt-link>
-      <nuxt-link to="/connect" exact
-        class="pointer item">connect</nuxt-link>
+  <div class="nav">
+
+    <div class="logo">
+      <Logo
+        v-bind:fillColor="'#4F86C6'" />
     </div>
 
+    <Primary
+      v-bind:text="'Reach Out'" />
   </div>
 </template>
 
 <script>
+import Primary from './Primary.vue'
+import Logo from './Logo.vue'
+
 export default {
+  components: {
+    Primary,
+    Logo
+  },
   data: () => {
     return {
       darkNav: false
     }
   },
   methods: {
-    getBackgroundColor: function(event) {
-      const scrollTop = event.target.scrollingElement.scrollTop;
-      this.darkNav = scrollTop > 100 ? true : false;
-    },
-    dark: () => {
-      return 'DARK NAVs' + this.darkNav;
-    }
+
   },
   beforeMount () {
     window.addEventListener('scroll', this.getBackgroundColor);
@@ -47,42 +43,21 @@ export default {
 .nav {
   width: 100%;
   height: 6vh;
-  position: fixed;
   top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   z-index: $nav-z;
+  padding: 0 2vw;
+  align-items: center;
 
-  @include transition(background 800ms ease-in-out);
-
-  .nav-items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 6vh;
-    max-width: $nav-max-width;
-    margin: 0 auto;
+  .hello {
+    align-self: flex-end;
   }
-}
 
-.item {
-  font-size: 2.5vmax;
-  font-family: 'Arial Black', sans-serif;
-  color: $green-light;
-  height: 6vh;
-  line-height: 6vh;
-  padding: 0 15px;
-  position: relative;
-  text-decoration: none;
-
-  transition: color 150ms ease-in-out;
-
-  &:hover {
-    color: $green-hover;
+  .logo {
+    width: 100px;
+    height: 100%;
   }
-}
-
-.trans-gray {
-  background: rgba(0, 0, 0, 0.5);
 }
 </style>

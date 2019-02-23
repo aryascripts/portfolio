@@ -26,6 +26,10 @@ $card-overlap: 45px;
 }
 
 
+// NEWEST COLORS
+$body-bg: #fff;
+$dots-border: #4F86C6;
+
 @mixin boxShadow($val) {
   -webkit-box-shadow: $val;
   -moz-box-shadow: $val;
