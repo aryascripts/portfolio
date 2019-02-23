@@ -1,9 +1,13 @@
 <template>
-  <div class="quote-box">
-    <div class="quote">
-      “If a cluttered desk is a sign of a <span>cluttered mind</span>, of what, then, is an empty desk a sign?”
+  <div class="quote-container">
+    <span class="quote-title">Quote of the day</span>
+    <div class="quote-box">
+      <div class="quote">
+        “If a cluttered desk is a sign of a <span>cluttered mind</span>, of what, then, is an empty desk a sign?”
+      </div>
     </div>
   </div>
+
 </template>
 
 
@@ -15,14 +19,29 @@
 <style scoped lang="scss">
 @import './../sass/vars.scss';
 
+.quote-container {
+  width: 90vw;
+  margin: 0 auto;
+
+  .quote-title {
+    margin: -33px 0 0px 27px;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 36px;
+    position: absolute;
+    color: $dots-border;
+  }
+}
+
 .quote-box {
-  height: 10vh;
-  width: 100%;
-  background-color: #ff698e;
+  min-height: 10vh;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: $green-light;
+  color: $dots-border;
+
+  border: 2px solid $dots-border;
+  border-radius: 30px;
 
   .quote {
     width: 90%;

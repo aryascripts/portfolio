@@ -9,11 +9,19 @@
         <div class="name">aman bhimani</div>
         <div class="title">software developer</div>
     </div>
+
+    <Quotes />
   </div>
 </template>
 
 <script>
-  export default { }
+  import Quotes from './Quotes.vue'
+
+  export default {
+    components: {
+      Quotes
+    }
+  }
 </script>
 
 
@@ -79,6 +87,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .head-section[lazy=loading] {
