@@ -5,7 +5,7 @@
   "author": "Aman Bhimani <amanb014@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 3002",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -15,7 +15,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.2",
     "@nuxtjs/markdownit": "^1.2.1",
-    "nuxt": "^1.4.2"
+    "ajv": "^6.7.0",
+    "axios": "^0.18.0",
+    "fast-xml-parser": "^3.12.12",
+    "nuxt": "^1.4.2",
+    "xmldom": "^0.1.27"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

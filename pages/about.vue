@@ -27,6 +27,7 @@ export default {
   },
   created() {
     this.about_me = SiteData.getAboutMessage();
+    this.favorites = SiteData.getBooks('favorites');
   }
 
 }
