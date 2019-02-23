@@ -71,7 +71,8 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding-top: 20vh;
 }
 
 .pic-info {
