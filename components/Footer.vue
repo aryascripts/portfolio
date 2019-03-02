@@ -33,7 +33,7 @@
 
   .footer {
     width: 100%;
-    background-color: $background;
+    background-color: $dots-border;
     z-index: 10;
     padding: 20px 20px 30px 20px;
 

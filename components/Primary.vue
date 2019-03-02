@@ -1,5 +1,7 @@
 <template lang="html">
-  <div class="btn">
+  <div
+    v-bind:class="{btnprimary: type === 'primary' }"
+    class="btn pointer">
     {{ text }}
   </div>
 
@@ -8,7 +10,8 @@
 <script>
 export default {
   props: [
-    'text'
+    'text',
+    'type'
   ]
 }
 </script>
@@ -20,18 +23,29 @@ export default {
   font-size: 16px;
   line-height: 16px;
   font-weight: 600;
-  background-color: $body-bg;
   min-width: 150px;
   padding: 0 20px;
-  color: $dots-border;
   height: 39px;
   text-align: center;
   display: flex;
-  border: 2px solid $dots-border;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 47px;
+}
+
+.btnprimary {
+  background-color: $body-bg;
+  color: $dots-border;
+  border: 2px solid $dots-border;
+
+  @include transition(all 300ms ease-in-out);
+
+  &:hover {
+    background-color: #98b7de;
+    color: $body-bg;
+    border: 2px solid #98b7de;
+  }
 }
 
 </style>

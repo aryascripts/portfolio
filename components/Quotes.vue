@@ -22,6 +22,7 @@
 .quote-container {
   width: 90vw;
   margin: 0 auto;
+  margin-top: 50px;
 
   .quote-title {
     margin: -33px 0 0px 27px;
@@ -47,8 +48,7 @@
     width: 90%;
     max-width: $nav-max-width;
     margin: 0 auto;
-    font-family: 'Trochut', cursive;
-    font-size: 1.9vmax;
+    font-size: 1.2rem;
     text-align: center;
     letter-spacing: 1px;
 

@@ -10,7 +10,7 @@
         <div class="title">software developer</div>
     </div>
 
-    <Quotes />
+    <Quotes class="quotes" />
   </div>
 </template>
 
@@ -47,6 +47,7 @@
 .name {
   font-size: 2.8vmax;
   line-height: 2.8vmax;
+  margin-top: 10px;
 }
 .title { font-size: 1.8vmax; }
 
@@ -99,4 +100,5 @@
 .head-section[lazy=loaded] {
   opacity: 1;
 }
+
 </style>
