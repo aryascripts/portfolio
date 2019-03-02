@@ -2,11 +2,20 @@
   <div class="collection">
 
     <h1>{{ name }}</h1>
-    <Card
-      class="card"
-      v-for="p in projects"
-      v-bind:key="p.id"
-      v-bind:project="p"/>
+    <div class="loop-cards">
+      <!-- <Card
+        class="card"
+        v-for="p in projects"
+        v-bind:key="p.id"
+        v-bind:project="p"/> -->
+
+        <div v-for="p in projects"
+        v-bind:key="p.id"
+        class="singe-card">
+
+        </div>
+    </div>
+
   </div>
 </template>
 
@@ -42,4 +51,21 @@ h1 {
   margin-bottom: 42px;
 }
 
+.loop-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.singe-card {
+  width: 180px;
+  height: 140px;
+  background-color: #e6fdf2;
+  border: 11px solid transparent;
+  -webkit-box-sizing: unset;
+  box-sizing: unset;
+  background-clip: content-box;
+  border-radius: 25px;
+  /* border-left: 0px; */
+}
 </style>
