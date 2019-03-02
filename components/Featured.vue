@@ -1,8 +1,7 @@
 <template>
   <div class="background">
-    <Quotes />
 
-    <div class="container">
+    <div class="container padding">
       <h1><span>f</span>eatured <span>w</span>ork</h1>
       <Collection
         v-bind:projects="projects" />
@@ -35,10 +34,10 @@ export default {
 @import './../sass/vars.scss';
 
 .padding {
-  padding: 0px 15px 0 15px;
+  padding: 15px;
 }
 .background {
-  background-color: $background;
+  background-color: $dots-border;
 }
 
 </style>

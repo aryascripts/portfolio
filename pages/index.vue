@@ -1,7 +1,7 @@
 <template>
   <div>
     <Head />
-    <!-- <Featured /> -->
+    <Featured />
   </div>
 </template>
 
