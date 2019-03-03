@@ -1,26 +1,24 @@
 <template>
-  <div class="collection">
+<div class="collection">
 
-    <h1>{{ name }}</h1>
-    <div class="loop-cards">
-      <!-- <Card
-        class="card"
-        v-for="p in projects"
-        v-bind:key="p.id"
-        v-bind:project="p"/> -->
+  <h1>{{ name }}</h1>
+    <Card
+      class="card"
+      v-for="(p, i) in projects"
+      v-bind:key="p.id"
+      v-bind:project="p"
+      v-bind:num="i"/>
 
-        <div v-for="p in projects"
-        v-bind:key="p.id"
-        class="singe-card">
-        </div>
+      <!-- <div v-for="p in projects"
+      v-bind:key="p.id"
+      class="singe-card">
+      </div>
 
-        <div class="singe-card"></div>
-        <div class="singe-card"></div>
-        <div class="singe-card"></div>
-        <div class="singe-card"></div>
-        <div class="singe-card"></div>
-    </div>
-
+      <div class="singe-card"></div>
+      <div class="singe-card"></div>
+      <div class="singe-card"></div>
+      <div class="singe-card"></div>
+      <div class="singe-card"></div> -->
   </div>
 </template>
 
@@ -42,11 +40,10 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: $card-overlap;
   width: 100%;
 
-  .card:last-child {
-    border-radius: $card-radius;
+  .card {
+    width: 100%;
   }
 }
 
@@ -56,15 +53,12 @@ h1 {
 }
 
 .loop-cards {
-  display: grid;
-  width: 100%;
-  grid-gap: 12px;
-  grid-template-columns: repeat(auto-fill, 180px);
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .singe-card {
-  width: 180px;
+  width: 220px;
   height: 140px;
   background-color: #e6fdf2;
   border: 11px solid transparent;

@@ -7,7 +7,7 @@
             class="about-text"
             v-html="about_me"></div>
 
-            <Primary
+            <Primary class="learn-more"
               v-bind:type="'secondary'"
               v-bind:text="'Learn More'" />
     </div>
@@ -51,6 +51,10 @@ export default {
   background-color: $dots-border;
   -webkit-clip-path: polygon(0 30px, 100% 0, 100% 88%, 0 100%);
   clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
+}
+
+.learn-more {
+  margin: 20px auto;
 }
 
 </style>

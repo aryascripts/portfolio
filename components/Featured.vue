@@ -2,10 +2,11 @@
   <div class="background">
 
     <div class="container padding">
-      <h1><span>f</span>eatured <span>w</span>ork</h1>
-      <Collection
-        v-bind:projects="projects" />
+      <h1>FEATURED WORK</h1>
     </div>
+
+    <Collection
+      v-bind:projects="projects" />
 
   </div>
 </template>
@@ -34,10 +35,14 @@ export default {
 @import './../sass/vars.scss';
 
 .padding {
-  padding: 15px;
+  padding-top: 32px;
 }
 .background {
-  background-color: $dots-border;
+  background-color: #386fad;
+  margin-top: -5%;
+  padding: 80px 0;
+  -webkit-clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
 }
 
 </style>

@@ -1,8 +1,8 @@
 <template lang="html">
   <div
     v-bind:class="{
-      'btn-secondary': type === 'secondary',
-      'btn-primary': type === 'primary'
+      'secondary-btn': type === 'secondary',
+      'primary-btn': type === 'primary'
       }"
     class="btn pointer">
     {{ text }}
@@ -40,10 +40,10 @@ export default {
   @include transition(all 300ms ease-in-out);
 }
 
-.btn-secondary {
+.secondary-btn {
   background-color: $body-bg;
   color: $dots-border;
-  border: 2px solid $body-bg;
+  border: 2px solid $dots-border;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.2);
@@ -51,10 +51,10 @@ export default {
   }
 }
 
-.btn-primary {
-  background-color: $dots-border;
-  color: $body-bg;
-  border: 2px solid $body-bg;
+.primary-btn {
+  background-color: $body-bg;
+  color: $dots-border;
+  border: 2px solid $dots-border;
 
   &:hover {
     background-color: #98b7de;

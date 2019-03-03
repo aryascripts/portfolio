@@ -1,36 +1,29 @@
 <template>
   <div
     v-if="project"
-    v-bind:style="{backgroundColor: cardColor}"
+    v-bind:style="{
+      'border-left': num % 2 === 1 ? '12px solid white' : 'none',
+      'border-right': num % 2 === 0 ? '12px solid white' : 'none'
+      }"
     class="card">
 
-    <div class="content">
-      <div class="name">
-        {{ project.name }}
-      </div>
-
-      <div v-html="post" class="para post"></div>
-
-      <div class="para date">
-        {{ getReadableDate(project.date.start) }}
-        --
-        {{ project.date.end ? getReadableDate(project.date.end) : 'current' }}
-      </div>
-    </div>
   </div>
 
-  <div
+  <!-- <div
     v-else-if="text"
-    v-bind:style="{backgroundColor: cardColor}"
     class="card rounded">
 
     <div
       v-html="text"
       class="content textonly">
     </div>
-  </div>
+  </div> -->
 
 </template>
+
+<!-- v-bind:style="{
+  'backgroundImage': `url(${require('@/static/images/'+ project.images[0] ) })`
+  }" -->
 
 <script>
 import SiteData from './../utils/content'
@@ -39,27 +32,26 @@ import { getReadableDate } from './../utils/functions'
 export default {
   props: [
     'project',
-    'text'
+    'text',
+    'num'
   ],
   methods: {
-    getRandomColor() {
-      const randomPastel = `hsl(${360 * Math.random()}, ${(25 + 70 * Math.random())}%, ${(85 + 10 * Math.random())}%)`
-      return randomPastel;
+    getThumbnail() {
+      return '@/static/images/viewtube1.png';
+    },
+    mouseover(event) {
+      console.log('moused over', event);
+      this.hover = !this.hover;
+      console.log(this.hover);
     }
   },
-  data() {
-    const color = this.getRandomColor();
-    return {
-      cardColor: color
-    }
-  },
-  computed: {
-    post() {
-      return SiteData.getPost(this.project.md_file)
-    }
-  },
+  computed: {},
   beforeCreate() {
     this.getReadableDate = getReadableDate;
+    this.hover = false;
+  },
+  afterCreate() {
+    console.log('Thumbnail:::', this.project.images[0]);
   }
 }
 
@@ -67,21 +59,20 @@ export default {
 
 <style scoped lang="scss">
 @import './../sass/vars.scss';
-  .card {
-    width: 100%;
-    min-height: 100px;
-    background-color: $green-light;
-    border-radius: $card-radius;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    position: relative;
-    margin-top: -45px;
 
-    @include boxShadow(0px 0px 9px 0px rgba(0,0,0,0.10));
-    transition: 300ms box-shadow ease, 3s background-color ease;
+  .card {
+    min-height: 200px;
+    box-sizing: unset;
+    overflow: hidden;
+    background-position: top center;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+
+    @include transition(all 200ms ease-in);
 
     &:hover {
-      @include boxShadow(0px 3px 15px 0px rgba(0,0,0,0.55));
+      background-color: rgba(255, 255, 255, 0.07);
     }
   }
 
@@ -90,48 +81,5 @@ export default {
     font-weight: 300;
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 15px #{$card-overlap+25} 15px;
-    height: 100%;
-  }
 
-  .name {
-    @extend %font;
-    text-align: center;
-    font-weight: 100;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 24px;
-  }
-
-  .description {
-    @extend %font;
-
-    letter-spacing: 0px;
-    flex-grow: 1;
-    overflow: hidden;
-  }
-
-  .post {
-    @extend .description;
-  }
-
-  .date {
-    @extend %font;
-
-    text-align: right;
-    letter-spacing: 0px;
-    align-self: flex-end;
-    margin: 15px 0;
-  }
-
-  .rounded {
-    border-radius: $card-radius;
-  }
-  .textonly {
-    padding: 15px;
-  }
 </style>
