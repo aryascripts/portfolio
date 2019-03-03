@@ -26,9 +26,7 @@
         "documents": ""
       },
       "images": [
-        "~static/images/viewtube1.png",
-        "~static/images/viewtube2.png",
-        "~static/images/viewtube3.png"
+        "viewtube1.png"
       ]
     },
     { "name":"Minesweeper",
@@ -52,9 +50,7 @@
         "documents": ""
       },
       "images": [
-        "~static/images/minesweeper1.png",
-        "~static/images/minesweeper2.png",
-        "~static/images/minesweeper3.png"
+        "viewtube1.png"
       ]
     },
     { "name":"Connect 4",
@@ -78,14 +74,12 @@
         "documents": ""
       },
       "images": [
-        "~static/images/connect41.png",
-        "~static/images/connect42.png",
-        "~static/images/connect43.png"
+        "viewtube1.png"
       ]
     }
   ],
   "about": {
-    "about_me": "Hello there! My name is Aman Bhimani, and you've just found my little corner of the internet. On this side, you will find the latest and the greatest that I have been working on. Below are my interets, and how this corner came to be.<br/><br/>Below are some of the books that I have been reading, and some of my favorites. Please don't hesitate to ask me about any of this information - personal or professional. See you around in your corner!"
+    "about_me": "Hello there! My name is Aman Bhimani, and you've just found my little corner of the internet. On this side, you will find the latest and the greatest that I have been working on. Below are my interets, and how this corner came to be.<br/><br/>Below are some of the projects that I have currently been working on or completed in the past. Some of my hobbies include teaching and inspiring individuals interested in the STEM field, so if you have any questions, please feel free to reach out to me in any way possible & convenient."
   },
   "timeline": [
     { "event": "",

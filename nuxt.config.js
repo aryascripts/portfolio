@@ -13,7 +13,8 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Trochut'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Imprima'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:200' }
     ]
   },
   /*

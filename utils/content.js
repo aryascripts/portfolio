@@ -40,7 +40,7 @@ const getBooksFromShelf = async (user, shelf) => {
   if( parser.validate(data) === true) { //optional (it'll return an object in case it's not valid)
     var jsonObj = parser.parse(data);
     console.log(JSON.stringify(jsonObj));
-}
+  }
 }
 
 export default {
