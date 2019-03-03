@@ -25,21 +25,25 @@
   @import './../sass/vars.scss';
 
   %light-font {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    color: $white-text;
+    color: $dots-border;
   }
   $max-footer: 500px;
 
   .footer {
     width: 100%;
-    background-color: $dots-border;
+    background-color: $body-bg;
     z-index: 10;
-    padding: 20px 20px 30px 20px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    -webkit-clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
+    margin-top: -32px;
+    padding: 60px 20px 30px 20px;
   }
 
   .name {
@@ -57,10 +61,10 @@
   .code {
     font-family: 'Courier New', monospace;
     font-size: 12pt;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     max-width: $max-footer;
-    color: $white-text;
+    color: $dots-border;
     margin-top: 10px;
 
     display: flex;
