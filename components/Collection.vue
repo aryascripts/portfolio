@@ -12,8 +12,13 @@
         <div v-for="p in projects"
         v-bind:key="p.id"
         class="singe-card">
-
         </div>
+
+        <div class="singe-card"></div>
+        <div class="singe-card"></div>
+        <div class="singe-card"></div>
+        <div class="singe-card"></div>
+        <div class="singe-card"></div>
     </div>
 
   </div>
@@ -38,7 +43,6 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: $card-overlap;
-
   width: 100%;
 
   .card:last-child {
@@ -52,9 +56,11 @@ h1 {
 }
 
 .loop-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  width: 100%;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fill, 180px);
+  justify-content: center;
 }
 
 .singe-card {

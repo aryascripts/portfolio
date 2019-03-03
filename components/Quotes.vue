@@ -47,7 +47,7 @@
   .quote {
     width: 90%;
     max-width: $nav-max-width;
-    margin: 0 auto;
+    margin: 10px auto;
     font-size: 1.2rem;
     text-align: center;
     letter-spacing: 1px;
