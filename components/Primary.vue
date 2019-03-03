@@ -1,6 +1,9 @@
 <template lang="html">
   <div
-    v-bind:class="{btnprimary: type === 'primary' }"
+    v-bind:class="{
+      'btn-secondary': type === 'secondary',
+      'btn-primary': type === 'primary'
+      }"
     class="btn pointer">
     {{ text }}
   </div>
@@ -32,14 +35,26 @@ export default {
   justify-content: center;
   align-items: center;
   border-radius: 47px;
-}
-
-.btnprimary {
-  background-color: $body-bg;
-  color: $dots-border;
-  border: 2px solid $dots-border;
+  width: 20px;
 
   @include transition(all 300ms ease-in-out);
+}
+
+.btn-secondary {
+  background-color: $body-bg;
+  color: $dots-border;
+  border: 2px solid $body-bg;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $body-bg;
+  }
+}
+
+.btn-primary {
+  background-color: $dots-border;
+  color: $body-bg;
+  border: 2px solid $body-bg;
 
   &:hover {
     background-color: #98b7de;

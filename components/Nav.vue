@@ -7,7 +7,7 @@
     </div>
 
     <Primary
-      v-bind:type="'primary'"
+      v-bind:type="'secondary'"
       v-bind:text="'Reach Out'" />
   </div>
 </template>

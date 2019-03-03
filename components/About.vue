@@ -6,6 +6,10 @@
         <div
             class="about-text"
             v-html="about_me"></div>
+
+            <Primary
+              v-bind:type="'secondary'"
+              v-bind:text="'Learn More'" />
     </div>
   </div>
 
@@ -13,8 +17,12 @@
 
 <script>
 import SiteData from './../utils/content.js'
+import Primary from './Primary.vue'
 
 export default {
+  components: {
+    Primary
+  },
   data() {
     return {
       about_me: ''
