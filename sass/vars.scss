@@ -29,6 +29,7 @@ $card-overlap: 45px;
 // NEWEST COLORS
 $body-bg: #fff;
 $dots-border: #4F86C6;
+$second-slider: #386fad;
 
 @mixin boxShadow($val) {
   -webkit-box-shadow: $val;
@@ -40,4 +41,13 @@ $dots-border: #4F86C6;
   -moz-transition: $def;
   -o-transition: $def;
   transition: $def;
+}
+
+%left-down {
+  -webkit-clip-path: polygon(0 30px, 100% 0, 100% 88%, 0 100%);
+  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
+}
+%right-down {
+  -webkit-clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
 }

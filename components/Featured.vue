@@ -8,6 +8,11 @@
     <Collection
       v-bind:projects="projects" />
 
+
+      <Primary
+        class="resume-button"
+        v-bind:type="'primary'"
+        v-bind:text="'Download Resume'" />
   </div>
 </template>
 
@@ -15,10 +20,12 @@
 import Quotes from './Quotes.vue'
 import Collection from './Collection.vue'
 import SiteData from './../utils/content'
+import Primary from './Primary.vue'
 
 export default {
   components: {
     Quotes,
+    Primary,
     Collection
   },
   data() {
@@ -38,11 +45,15 @@ export default {
   padding-top: 32px;
 }
 .background {
-  background-color: #386fad;
-  margin-top: -5%;
+  background-color: $second-slider;
+  margin-top: -40px;
   padding: 80px 0;
-  -webkit-clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
-  clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0 100%);
+  text-align: center;
+
+  @extend %right-down;
+}
+.resume-button {
+  margin-top: 30px;
 }
 
 </style>

@@ -7,9 +7,9 @@
             class="about-text"
             v-html="about_me"></div>
 
-            <Primary class="learn-more"
-              v-bind:type="'secondary'"
-              v-bind:text="'Learn More'" />
+        <Primary class="learn-more"
+          v-bind:type="'secondary'"
+          v-bind:text="'Learn More'" />
     </div>
   </div>
 
@@ -41,16 +41,18 @@ export default {
 
 .container {
   padding: 120px 0;
+  text-align: center;
 
   .about-text {
     color: $green-light;
+    text-align: left;
   }
 }
 
 .background {
   background-color: $dots-border;
-  -webkit-clip-path: polygon(0 30px, 100% 0, 100% 88%, 0 100%);
-  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
+  @extend %left-down;
+  padding: 0 20px;
 }
 
 .learn-more {

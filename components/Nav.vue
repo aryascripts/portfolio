@@ -43,7 +43,7 @@ export default {
 
 .nav {
   width: 100%;
-  height: 6vh;
+  height: 10vh;
   top: 0;
   display: flex;
   flex-direction: row;

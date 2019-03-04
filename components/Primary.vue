@@ -30,12 +30,11 @@ export default {
   padding: 0 20px;
   height: 39px;
   text-align: center;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 47px;
-  width: 20px;
 
   @include transition(all 300ms ease-in-out);
 }

@@ -53,5 +53,6 @@ export default {
   getTimeline: () => site_data.timeline,
   getFeaturedProjects: () => site_data.projects.filter(project => project.featured),
   getAboutMessage: () => site_data.about.about_me,
-  getBooks: (shelf) => getBooksFromShelf()
+  getBooks: (shelf) => getBooksFromShelf(),
+  getResumeLink: () => site_data.resume_link
 }

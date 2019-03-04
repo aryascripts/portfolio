@@ -45,11 +45,11 @@
   justify-self: flex-end;
 }
 .name {
-  font-size: 2.8vmax;
-  line-height: 2.8vmax;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
   margin-top: 10px;
 }
-.title { font-size: 1.8vmax; }
+.title { font-size: 1rem; }
 
 .circle-border {
   width: 200px;
