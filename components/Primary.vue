@@ -57,9 +57,8 @@ export default {
   border: 2px solid $dots-border;
 
   &:hover {
-    background-color: #98b7de;
+    background-color: $dots-border;
     color: $body-bg;
-    border: 2px solid #98b7de;
   }
 }
 
