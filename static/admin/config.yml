@@ -39,10 +39,9 @@ collections:
       - label: "Description"
         name: "description"
         widget: "markdown"
-
   - name: "site_settings"
     label: "Site Settings"
-    folder: "content"
+    folder: "content/site"
     create: true
     slug: "{{slug}}"
     fields:
