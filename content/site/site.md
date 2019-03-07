@@ -1,6 +1,6 @@
 ---
 title: "Aman Bhimani"
-quotes: ["", ""]
+quotes: ["quote1"]
 resume_link: "test"
 about: "About Me"
 ---

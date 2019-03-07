@@ -51,6 +51,7 @@ collections:
       - label: "Quotes"
         name: "quotes"
         widget: "list"
+        default: ["news"]
       - label: "Resume Link"
         name: "resume_link"
         widget: "string"
