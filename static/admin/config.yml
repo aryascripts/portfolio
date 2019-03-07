@@ -42,7 +42,7 @@ collections:
   - name: "site_settings"
     label: "Site Settings"
     folder: "content/site"
-    create: true
+    create: false
     slug: "{{slug}}"
     fields:
       - label: "Title"
