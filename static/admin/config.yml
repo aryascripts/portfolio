@@ -13,10 +13,32 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Start Date", name: "date", widget: "date"}
-      - {label: "End Date", name: "date", widget: "date"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Skills", name: "skills", widget: "list"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "project"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Start Date"
+        name: "date"
+        widget: "date"
+      - label: "End Date"
+        name: "date"
+        widget: "date"
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "image"
+      - label: "Skills"
+        name: "skills"
+        widget: "list"
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+      - label: "Description"
+        name: "description"
+        widget: "markdown"
+      - label: "Links"
+        name: "links"
+        widget: "markdown"
