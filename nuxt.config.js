@@ -53,5 +53,8 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  serverMiddleware: [
+    '~/server/index.js'
+  ]
 }
