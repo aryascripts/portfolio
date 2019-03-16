@@ -22,6 +22,8 @@ import Collection from './Collection.vue'
 import SiteData from './../utils/content'
 import Primary from './Primary.vue'
 
+import axios from '~/plugins/axios'
+
 export default {
   components: {
     Quotes,
@@ -29,6 +31,11 @@ export default {
     Collection
   },
   data() {
+
+    axios.get('api/projects/list')
+      .then(data => console.log(data));
+
+
     return {
       projects: SiteData.getFeaturedProjects()
     }
