@@ -14,7 +14,7 @@
 import Head from '~/components/Head.vue'
 import Featured from '~/components/Featured.vue'
 import About from '~/components/About.vue'
-import axios from './../plugins/axios'
+import SiteSettings from '~/requests/site'
 
 export default {
   components: {
@@ -23,7 +23,7 @@ export default {
     About
   },
   async asyncData() {
-    const { data } = await axios.get('/api/site/settings');
+    const data = await SiteSettings.getAll()
     return {
       title: data.title,
       name: data.name,

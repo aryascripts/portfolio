@@ -1,7 +1,6 @@
 const { Router } = require('express')
 
 const router = Router()
-const path = require('path')
 const FilesWorker = require('./../filesWorker')
 const siteWorker = new FilesWorker('./../content/site')
 

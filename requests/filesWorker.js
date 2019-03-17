@@ -3,7 +3,7 @@ const path = require('path')
 const md = require('markdown-it')()
 const YAML = require('yamljs')
 
-module.exports = class FilesWorker {
+export default class FilesWorker {
 
   constructor(path) {
     this.path = path;
@@ -31,7 +31,6 @@ module.exports = class FilesWorker {
 
   getFiles() {
     if(this.files.length) return Promise.resolve(this.files);
-
     return this.storeInCache();
   }
 
