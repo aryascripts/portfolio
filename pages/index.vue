@@ -14,7 +14,7 @@
 import Head from '~/components/Head.vue'
 import Featured from '~/components/Featured.vue'
 import About from '~/components/About.vue'
-import SiteSettings from '~/requests/site'
+import * as Site from './../content/site.json'
 
 export default {
   components: {
@@ -23,12 +23,10 @@ export default {
     About
   },
   async asyncData() {
-    const data = await SiteSettings.getAll()
     return {
-      title: data.title,
-      name: data.name,
-      about: data.about,
-      quotes: data.quotes
+      title: Site.title,
+      name: Site.name,
+      about: Site.about
     }
   }
 }
