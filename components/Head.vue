@@ -6,8 +6,8 @@
           <div class="circle-background"></div>
         </div>
 
-        <div class="name">aman bhimani</div>
-        <div class="title">software developer</div>
+        <div class="name">{{ config.name }}</div>
+        <div class="title">{{ config.title }}</div>
     </div>
 
     <Quotes class="quotes" />
@@ -20,7 +20,8 @@
   export default {
     components: {
       Quotes
-    }
+    },
+    props: [ 'config' ]
   }
 </script>
 
@@ -48,6 +49,7 @@
   font-size: 2.2rem;
   line-height: 2.2rem;
   margin-top: 10px;
+  text-transform: lowercase;
 }
 .title { font-size: 1rem; }
 
