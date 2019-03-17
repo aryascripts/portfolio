@@ -3,11 +3,15 @@ const path = require('path')
 const md = require('markdown-it')()
 const YAML = require('yamljs')
 
-export default class FilesWorker {
+module.exports = class FilesWorker {
 
   constructor(path) {
     this.path = path;
     this.storeInCache();
+  }
+
+  static WriteJSONToFile(location, content, callback) {
+    fs.writeFile(path.join(__dirname, location), JSON.stringify(content), callback);
   }
 
   getFolderFilesList() {
