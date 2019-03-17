@@ -3,67 +3,67 @@ backend:
   branch: master
 publish_mode: editorial_workflow
 
-media_folder: "static/images"
-public_folder: "/images"
+media_folder: static/images
+public_folder: /images
 
 collections:
-  - name: "project"
-    label: "Project"
-    folder: "content/projects"
+  - name: project
+    label: Project
+    folder: content/projects
     create: true
-    slug: "{{slug}}"
+    slug: {{slug}}
     fields:
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "project"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Start Date"
-        name: "start_date"
-        widget: "date"
-      - label: "End Date"
-        name: "end_date"
-        widget: "date"
-      - label: "Thumbnail"
-        name: "thumbnail"
-        widget: "image"
-      - label: "Skills"
-        name: "skills"
-        widget: "list"
-      - label: "Featured"
-        name: "featured"
-        widget: "boolean"
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: project
+      - label: Title
+        name: title
+        widget: string
+      - label: Start Date
+        name: start_date
+        widget: date
+      - label: End Date
+        name: end_date
+        widget: date
+      - label: Thumbnail
+        name: thumbnail
+        widget: image
+      - label: Skills
+        name: skills
+        widget: list
+      - label: Featured
+        name: featured
+        widget: boolean
         default: false
-      - label: "Description"
-        name: "description"
-        widget: "markdown"
-  - name: "site_settings"
-    label: "Site Settings"
-    folder: "content/site"
+      - label: Description
+        name: description
+        widget: markdown
+  - name: site_settings
+    label: Site Settings
+    folder: content/site
     create: false
-    slug: "{{slug}}"
+    slug: {{slug}}
     fields:
-      - label: "Name"
-        name: "name",
-        widget: "string"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Resume Link"
-        name: "resume_link"
-        widget: "string"
-      - label: "About Me"
-        name: "about"
-        widget: "markdown"
-      - label: "Quotes"
-        name: "quotes"
-        widget: "list"
+      - label: Name
+        name: name
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Resume Link
+        name: resume_link
+        widget: string
+      - label: About Me
+        name: about
+        widget: markdown
+      - label: Quotes
+        name: quotes
+        widget: list
         fields:
-          - label: "Quote"
-            name: "quote"
-            widget: "string"
-          - label: "Author"
-            name: "author"
-            widget: "string"
+          - label: Quote
+            name: quote
+            widget: string
+          - label: Author
+            name: author
+            widget: string
