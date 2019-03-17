@@ -1,5 +1,6 @@
 ---
-title: Aman Bhimani
+name: aman bhimani
+title: software developer
 resume_link: >-
   https://docs.google.com/document/d/1H06hlWm33Oy9qVBiQFvB_-MjwZujZg8xqdC-bjk0DVk/edit?usp=sharing
 about: >-
