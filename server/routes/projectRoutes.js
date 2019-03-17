@@ -2,9 +2,9 @@ const { Router } = require('express')
 
 const router = Router()
 const path = require('path')
-const FilesWorker = require('./filesWorker')
+const FilesWorker = require('./../filesWorker')
 
-const projectWorker = new FilesWorker('../content/projects')
+const projectWorker = new FilesWorker('./../content/projects')
 
 router.get('/list', async (req, res) => {
   const files = await projectWorker.getFiles()

@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 
-const projects = require('./projectRoutes.js')
+const projects = require('./routes/projectRoutes.js')
+const site = require('./routes/siteRoutes.js')
 
 app.use('/projects', projects)
+app.use('/site', site)
 
 module.exports = {
   path: '/api',
