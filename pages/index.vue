@@ -2,7 +2,10 @@
   <div>
     <Head
       v-bind:config="{ title: title, name: name }" />
-    <About />
+
+    <About
+      v-bind:about="about"/>
+
     <Featured />
   </div>
 </template>
@@ -23,7 +26,9 @@ export default {
     const { data } = await axios.get('/api/site/settings');
     return {
       title: data.title,
-      name: data.name
+      name: data.name,
+      about: data.about,
+      quotes: data.quotes
     }
   }
 }

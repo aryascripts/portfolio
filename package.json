@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.2",
-    "@nuxtjs/markdownit": "^1.2.1",
+    "@nuxtjs/markdownit": "^1.2.3",
     "ajv": "^6.7.0",
     "axios": "^0.18.0",
     "express": "^4.16.4",

@@ -5,7 +5,10 @@
 
         <div
             class="about-text"
-            v-html="about_me"></div>
+            v-html="$md.render(about)">
+        </div>
+
+            <!-- {{ about }} -->
 
         <Primary class="learn-more"
           v-bind:type="'secondary'"
@@ -23,15 +26,7 @@ export default {
   components: {
     Primary
   },
-  data() {
-    return {
-      about_me: ''
-    }
-  },
-  created() {
-    this.about_me = SiteData.getAboutMessage()
-    this.favorites = SiteData.getBooks('favorites')
-  }
+  props: ['about']
 }
 </script>
 
@@ -46,6 +41,10 @@ export default {
   .about-text {
     color: $green-light;
     text-align: left;
+  }
+
+  .about-text > p {
+    margin-bottom: 10px;
   }
 }
 

@@ -36,7 +36,10 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   markdownit: {
-    'injected': true
+    'injected': true,
+    'preset': 'default',
+    'linkify': true,
+    'breaks': true,
   },
 
   build: {
