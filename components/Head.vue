@@ -54,8 +54,8 @@
 .title { font-size: 1rem; }
 
 .circle-border {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 200px;
   border: 4px dotted $dots-border;
   position: relative;
@@ -64,8 +64,8 @@
   animation: 1s ease-in-out 100ms 1 normal both running appear;
 
   .circle-background {
-    width: 180px;
-    height: 180px;
+    width: 164px;
+    height: 161px;
     border-radius: 180px;
     background: url('./../static/aman.jpg');
     background-size: cover;
