@@ -6,7 +6,8 @@ resume_link: >-
 about: >-
   Hello there! My name is Aman Bhimani, and you've just found my little corner
   of the internet. On this side, you will find the latest and the greatest that
-  I have been working on. Below are my interets, and how this corner came to be.
+  I have been working on. Below are my interets, and how this corner came to
+  be. 
 
 
   Below are some of the projects that I have currently been working on or
