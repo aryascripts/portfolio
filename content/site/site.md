@@ -13,7 +13,7 @@ about: >-
   Below are some of the projects that I have currently been working on or
   completed in the past. Some of my hobbies include teaching and inspiring
   individuals interested in the STEM field, so if you have any questions, please
-  feel free to reach out to me in any way possible & convenient.234
+  feel free to reach out to me in any way possible & convenient.
 quotes:
   - author: Albert Einstein
     quote: >-
