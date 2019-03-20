@@ -32,6 +32,10 @@ collections:
       - label: Skills
         name: skills
         widget: list
+        fields:
+          - label: Skill
+            name: skill
+            widget: string
       - label: Featured
         name: featured
         widget: boolean
