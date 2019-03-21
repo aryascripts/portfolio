@@ -14,7 +14,7 @@
 import Head from '~/components/Head.vue'
 import Featured from '~/components/Featured.vue'
 import About from '~/components/About.vue'
-import * as Site from './../content/site.json'
+const SiteData = require('~/requests/content.js')
 
 export default {
   components: {
@@ -24,9 +24,9 @@ export default {
   },
   async asyncData() {
     return {
-      title: Site.title,
-      name: Site.name,
-      about: Site.about
+      title: SiteData.getTitle(),
+      name: SiteData.getName(),
+      about: Site.getAboutText()
     }
   }
 }

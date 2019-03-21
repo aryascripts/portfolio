@@ -7,7 +7,6 @@ module.exports = class FilesWorker {
 
   constructor(path) {
     this.path = path;
-    this.storeInCache();
   }
 
   static WriteJSONToFile(location, content, callback) {
@@ -22,7 +21,7 @@ module.exports = class FilesWorker {
     })
   }
 
-  async storeInCache() {
+  async getFiles() {
     this.files = [];
     const files = await this.getFolderFilesList()
     for(let i = 0; i < files.length; i++) {
@@ -31,11 +30,6 @@ module.exports = class FilesWorker {
       this.files.push(this.getJSONFromFile(content))
     }
     return this.files;
-  }
-
-  getFiles() {
-    if(this.files.length) return Promise.resolve(this.files);
-    return this.storeInCache();
   }
 
   getJSONFromFile(fileContent) {
