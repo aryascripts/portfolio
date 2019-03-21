@@ -4,7 +4,8 @@ import projects from '~/content/projects.json'
 class SiteData {
 
   constructor() {
-    console.log(siteInfo)
+    this.site = site
+    this.projects = projects
   }
 
   getName() { return this.site.name }

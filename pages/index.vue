@@ -14,7 +14,7 @@
 import Head from '~/components/Head.vue'
 import Featured from '~/components/Featured.vue'
 import About from '~/components/About.vue'
-const SiteData = require('~/requests/content.js')
+import SiteData from '~/requests/content.js'
 
 export default {
   components: {
@@ -26,7 +26,7 @@ export default {
     return {
       title: SiteData.getTitle(),
       name: SiteData.getName(),
-      about: Site.getAboutText()
+      about: SiteData.getAboutText()
     }
   }
 }
