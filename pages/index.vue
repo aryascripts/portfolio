@@ -3,10 +3,9 @@
     <Head
       v-bind:config="{ title: title, name: name }" />
 
-    <About
-      v-bind:about="about"/>
+    <About v-bind:about="about"/>
 
-    <Featured />
+    <Featured v-bind:projects="featured"/>
   </div>
 </template>
 
@@ -26,7 +25,8 @@ export default {
     return {
       title: SiteData.getTitle(),
       name: SiteData.getName(),
-      about: SiteData.getAboutText()
+      about: SiteData.getAboutText(),
+      featured: SiteData.getFeaturedProjects()
     }
   }
 }

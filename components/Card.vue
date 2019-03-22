@@ -7,7 +7,16 @@
       }"
     class="card">
 
-    <h2>{{ project.name }}</h2>
+    <h2>{{ project.title }}</h2>
+
+    <div v-bind:style="{
+      backgroundImage: 'url(' + project.thumbnail + ')',
+      borderRadius: num % 2 === 0 ? '0 20px 20px 20px;' : '20px 0 20px 20px'
+      }"
+    class="background">
+
+    </div>
+
 
   </div>
 
@@ -69,7 +78,7 @@ export default {
     background-position: top center;
     -webkit-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
-    padding: 0 20px;
+    padding: 20px;
 
     @include transition(all 200ms ease-in);
 
@@ -94,6 +103,21 @@ export default {
   .right-card {
     border-right: 12px solid white;
     align-items: flex-end;
+  }
+
+  h2 {
+    background-color: rgba(255,255,255, 0.25);
+    // border-radius: 10px;
+    padding: 3px 5px;
+  }
+
+  .background {
+    width: 30%;
+    min-width: 200px;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 0 20px 20px 20px;
   }
 
 

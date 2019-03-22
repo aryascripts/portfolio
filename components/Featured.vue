@@ -19,7 +19,7 @@
 <script>
 import Quotes from './Quotes.vue'
 import Collection from './Collection.vue'
-import SiteData from './../utils/content'
+import SiteData from './../requests/content.js'
 import Primary from './Primary.vue'
 
 export default {
@@ -28,11 +28,7 @@ export default {
     Primary,
     Collection
   },
-  data() {
-    return {
-      projects: SiteData.getFeaturedProjects()
-    }
-  }
+  props: ['projects']
 }
 
 

@@ -12,7 +12,9 @@ class SiteData {
   getTitle() { return this.site.title }
   getAboutText() { return this.site.about }
 
-
+  getFeaturedProjects() {
+    return this.projects.filter(project => project.featured)
+  }
 }
 
 const siteData = new SiteData();

@@ -8,17 +8,6 @@
       v-bind:key="p.id"
       v-bind:project="p"
       v-bind:num="i"/>
-
-      <!-- <div v-for="p in projects"
-      v-bind:key="p.id"
-      class="singe-card">
-      </div>
-
-      <div class="singe-card"></div>
-      <div class="singe-card"></div>
-      <div class="singe-card"></div>
-      <div class="singe-card"></div>
-      <div class="singe-card"></div> -->
   </div>
 </template>
 
