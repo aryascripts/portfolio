@@ -8,8 +8,6 @@
             v-html="$md.render(about)">
         </div>
 
-            <!-- {{ about }} -->
-
         <Primary class="learn-more"
           v-bind:type="'secondary'"
           v-bind:text="'Learn More'" />
@@ -49,9 +47,10 @@ export default {
 }
 
 .background {
-  background-color: $dots-border;
-  @extend %left-down;
+  background-color: darken($head-bg, 15%);
+  @extend %right-down;
   padding: 0 20px;
+  margin: -35px 0 0 0;
 }
 
 .learn-more {

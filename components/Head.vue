@@ -123,12 +123,10 @@
 		animation: pulse 3s 1s cubic-bezier(.5,.5,0,1);
     animation-iteration-count: infinite;
 
-
 		&:nth-child(2) {
 			animation: pulse 3s 1.5s cubic-bezier(.5,.5,0,0.6);
       animation-iteration-count: infinite;
 		}
-
 	}
 
 }

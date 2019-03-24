@@ -56,8 +56,8 @@ export default {
   border: 2px solid $primary-bg;
 
   &:hover {
-    background-color: $dots-border;
-    color: $body-bg;
+    background-color: darken($blue-bg, 15%);
+    color: $dots-border;
   }
 }
 

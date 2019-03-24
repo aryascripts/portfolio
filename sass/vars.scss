@@ -5,8 +5,6 @@ $pink: #ff698e;
 $white-text: #f2f2f2;
 $green-hover: #c6ffbc;
 
-$background: #ff6969;
-
 // Z-INDEX
 $highest-z: 1000;
 $nav-z: $highest-z;
@@ -30,6 +28,9 @@ $card-overlap: 45px;
 $body-bg: #fff;
 $dots-border: $green-light;
 $second-slider: #386fad;
+$blue-bg: #4f86c6;
+
+$head-bg: $blue-bg;
 
 $primary-bg: $dots-border;
 
@@ -45,10 +46,6 @@ $primary-bg: $dots-border;
   transition: $def;
 }
 
-%left-down {
-  -webkit-clip-path: polygon(0 30px, 100% 0, 100% 88%, 0 100%);
-  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
-}
 %right-down {
   -webkit-clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
   clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);

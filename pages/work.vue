@@ -52,7 +52,6 @@ export default {
 }
 
 .cs {
-  background-color: $background;
   padding: 6vh 20px 0 20px;
 }
 </style>

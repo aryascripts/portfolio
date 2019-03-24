@@ -38,7 +38,6 @@ export default {
 
 .about  {
   min-height: 160vh;
-  background-color: $background;
   padding: calc(#{$nav-height} + 60px) 15px 0 15px;;
 }
 

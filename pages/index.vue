@@ -38,12 +38,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../sass/vars';
   .head-nav {
-    background: #4f86c6; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover, #4f86c6 34%, #4778b2 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, #4f86c6 34%,#4778b2 100%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, #4f86c6 34%,#4778b2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f86c6', endColorstr='#4778b2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: $head-bg; /* Old browsers */
+    background: -moz-radial-gradient(50% 13%, ellipse cover, $head-bg 34%, darken($head-bg, 10%) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(50% 13%, ellipse cover, $head-bg 34%, darken($head-bg, 10%) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(circle at 50% 13%, $head-bg 34%, darken($head-bg, 10%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
 
 
