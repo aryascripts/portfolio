@@ -31,8 +31,10 @@ $second-slider: #386fad;
 $blue-bg: #4f86c6;
 
 $head-bg: $blue-bg;
+$head-bg-15: darken($head-bg, 15%);
 
 $primary-bg: $dots-border;
+
 
 @mixin boxShadow($val) {
   -webkit-box-shadow: $val;

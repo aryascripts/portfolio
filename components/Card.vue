@@ -1,17 +1,15 @@
 <template>
   <div
     v-if="project"
-    v-bind:class="{
-      'left-card': num % 2 === 0,
-      'right-card': num % 2 === 1
-      }"
     class="card">
 
     <h2>{{ project.title }}</h2>
+    <div class="description">
+      {{ getShortDescription() }}
+    </div>
 
     <div v-bind:style="{
       backgroundImage: 'url(' + project.thumbnail + ')',
-      borderRadius: num % 2 === 0 ? '0 20px 20px 20px;' : '20px 0 20px 20px'
       }"
     class="background">
 
@@ -48,21 +46,15 @@ export default {
   ],
   methods: {
     getThumbnail() {
-      return '@/static/images/viewtube1.png';
+      return '@/static/images/viewtube1.png'
     },
-    mouseover(event) {
-      console.log('moused over', event);
-      this.hover = !this.hover;
-      console.log(this.hover);
+    getShortDescription() {
+      return this.project.description.split('\n')[0]
     }
   },
   computed: {},
   beforeCreate() {
     this.getReadableDate = getReadableDate;
-    this.hover = false;
-  },
-  afterCreate() {
-    console.log('Thumbnail:::', this.project.images[0]);
   }
 }
 
@@ -82,12 +74,9 @@ export default {
 
     @include transition(all 200ms ease-in);
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.07);
-    }
-
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   %font {
@@ -95,29 +84,36 @@ export default {
     font-weight: 300;
   }
 
-  .left-card {
-    border-left: 12px solid white;
-    align-items: flex-start;
-  }
-
-  .right-card {
-    border-right: 12px solid white;
-    align-items: flex-end;
-  }
-
   h2 {
-    background-color: rgba(255,255,255, 0.25);
-    // border-radius: 10px;
+    background-color: rgba(0,0,0, 0.25);
     padding: 3px 5px;
   }
 
+  .description {
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+
+    @extend %font;
+  }
+
   .background {
-    width: 30%;
+    width: 100%;
     min-width: 200px;
-    height: 100%;
+    height: 400px;
     background-size: cover;
-    background-position: 50%;
     border-radius: 0 20px 20px 20px;
+    max-height: 500px;
+
+    // animation: bgpan 60s linear;
+    // animation-iteration-count: infinite;
+
+  }
+
+  @keyframes bgpan {
+    0% { background-position-y: 0%; }
+    50% { background-position-y: 100%; }
+    100% { background-position-y: 0%; }
   }
 
 

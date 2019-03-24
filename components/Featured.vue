@@ -6,6 +6,7 @@
     </div>
 
     <Collection
+      class="max-width"
       v-bind:projects="projects" />
 
 

@@ -33,17 +33,17 @@
 
   .footer {
     width: 100%;
-    background-color: $body-bg;
+    background-color: $head-bg;
     z-index: 10;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    -webkit-clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
-    clip-path: polygon(0 0%, 100% 32px, 100% 100%, 0 100%);
     margin-top: -32px;
     padding: 60px 20px 30px 20px;
+
+    @extend %right-down;
   }
 
   .name {

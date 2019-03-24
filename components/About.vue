@@ -53,6 +53,10 @@ export default {
   margin: -35px 0 0 0;
 }
 
+h1 {
+  color: $dots-border;
+}
+
 .learn-more {
   margin: 20px auto;
 }

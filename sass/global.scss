@@ -11,7 +11,7 @@ h1 {
   @extend %font;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  color: $green-light;
+  color: $head-bg-15;
   padding: 0 0 10px 0;
   text-align: center;
 }
@@ -69,6 +69,15 @@ ul {
 
 body {
   background-color: $body-bg;
+}
+
+.max-width {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1000px) {
+    max-width: 94%;
+  }
 }
 
 .content {
