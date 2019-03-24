@@ -24,7 +24,8 @@ description: >-
   the last position in the last video is loaded automatically!
 
 
-  [View Source on
-  GitHub](https://github.com/amanb014/viewtube/tree/ng4-rewrite/ng4-rewrite){:target="_blank"}
+  <a
+  href="https://github.com/amanb014/viewtube/tree/ng4-rewrite/ng4-rewrite">Code
+  on GitHub</a>
 ---
 
