@@ -4,7 +4,6 @@
     <div class="line top">
       <div class="circle">
         <img :src="Quote" />
-        <!-- <img src="~/static/images/quote.svg?data" /> -->
       </div>
     </div>
 
@@ -54,7 +53,7 @@ export default {
   .quote {
     width: 85%;
     max-width: $nav-max-width;
-    margin: 10px auto;
+    margin: 30px auto;
     font-size: 1.2rem;
     text-align: center;
     letter-spacing: 1px;
@@ -67,7 +66,7 @@ export default {
   }
 }
 
-$circle-size: 70px;
+$circle-size: 50px;
 .line {
   width: 100%;
   height: 3px;
