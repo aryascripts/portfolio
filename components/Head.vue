@@ -125,8 +125,8 @@
   opacity: 0.5;
   margin: 10px auto;
 
-  // animation: updown 2s cubic-bezier(.5,.5,0,1);
-  // animation-iteration-count: infinite;
+  animation: updown 2s cubic-bezier(.5,.5,0,1);
+  animation-iteration-count: infinite;
 
   cursor: pointer;
 }
@@ -145,18 +145,18 @@
   margin-top: 50px;
 	max-width: 30rem;
   fill: $dots-border;
-  animation-iteration-count: infinite;
+  // animation-iteration-count: infinite;
 
 	circle {
 		transform: scale(0);
 		opacity: 0;
 		transform-origin: 50% 50%;
-		animation: pulse 3s 1s cubic-bezier(.5,.5,0,1);
-    animation-iteration-count: infinite;
+		// animation: pulse 3s 1s cubic-bezier(.5,.5,0,1);
+    // animation-iteration-count: infinite;
 
 		&:nth-child(2) {
-			animation: pulse 3s 1.5s cubic-bezier(.5,.5,0,0.6);
-      animation-iteration-count: infinite;
+			// animation: pulse 3s 1.5s cubic-bezier(.5,.5,0,0.6);
+      // animation-iteration-count: infinite;
 		}
 	}
 }
