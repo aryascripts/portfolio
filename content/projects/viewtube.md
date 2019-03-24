@@ -25,6 +25,6 @@ description: >-
 
 
   [View Source on
-  GitHub](https://github.com/amanb014/viewtube/tree/ng4-rewrite/ng4-rewrite)
+  GitHub](https://github.com/amanb014/viewtube/tree/ng4-rewrite/ng4-rewrite){:target="_blank"}
 ---
 
