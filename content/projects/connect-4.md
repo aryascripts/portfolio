@@ -12,11 +12,8 @@ skills:
 featured: true
 description: >-
   Classic Connect 4 game written in Vanilla JS, HTML, and CSS3 for animations
-  and styling. 
-
-
-  Each player gets to enter their name for pseudo-points assigned to their name.
-  Scores are stored for the user's session.
+  and styling. Each player gets to enter their name for pseudo-points assigned
+  to their name. Scores are stored for the user's session.
 
 
   [Code on GitHub](https://github.com/amanb014/connect4)
