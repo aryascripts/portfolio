@@ -28,7 +28,7 @@ $card-overlap: 45px;
 
 // NEWEST COLORS
 $body-bg: #fff;
-$dots-border: #4F86C6;
+$dots-border: $green-light;
 $second-slider: #386fad;
 
 @mixin boxShadow($val) {

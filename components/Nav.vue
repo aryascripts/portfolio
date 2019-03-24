@@ -3,7 +3,7 @@
 
     <div class="logo">
       <Logo
-        v-bind:fillColor="'#4F86C6'" />
+        v-bind:fillColor="'#f1ffe7'" />
     </div>
 
     <Primary

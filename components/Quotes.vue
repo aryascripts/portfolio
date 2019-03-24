@@ -1,10 +1,21 @@
 <template>
   <div class="quote-container">
-    <span class="quote-title">Quote of the day</span>
+
+    <div class="line top">
+      <div class="circle">
+        <img :src="Quote" />
+        <!-- <img src="~/static/images/quote.svg?data" /> -->
+      </div>
+    </div>
+
     <div class="quote-box">
       <div class="quote">
         “If a cluttered desk is a sign of a <span>cluttered mind</span>, of what, then, is an empty desk a sign?”
       </div>
+    </div>
+
+    <div class="line bottom">
+      <div class="circle"><img :src="Quote" /></div>
     </div>
   </div>
 
@@ -12,7 +23,13 @@
 
 
 <script>
+import Quote from '~/static/images/quote.svg'
 
+export default {
+  data: () => ({
+    Quote
+  })
+}
 </script>
 
 
@@ -23,14 +40,6 @@
   width: 90vw;
   margin: 0 auto;
   margin-top: 50px;
-
-  .quote-title {
-    margin: -33px 0 0px 27px;
-    font-family: 'Bilbo Swash Caps', cursive;
-    font-size: 36px;
-    position: absolute;
-    color: $dots-border;
-  }
 }
 
 .quote-box {
@@ -41,11 +50,9 @@
   justify-content: space-around;
   color: $dots-border;
 
-  border: 2px solid $dots-border;
-  border-radius: 30px;
 
   .quote {
-    width: 90%;
+    width: 85%;
     max-width: $nav-max-width;
     margin: 10px auto;
     font-size: 1.2rem;
@@ -58,5 +65,45 @@
       font-weight: bold;
     }
   }
+}
+
+$circle-size: 70px;
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: $dots-border;
+
+  .circle {
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: $circle-size;
+  }
+}
+
+
+.top {
+  .circle {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+.bottom {
+  .circle {
+    float: right;
+  }
+}
+.circle {
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: $circle-size;
+  background-color: $dots-border;
+}
+
+img {
+  width: 60%;
 }
 </style>
