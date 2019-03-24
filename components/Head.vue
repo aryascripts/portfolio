@@ -15,6 +15,17 @@
     </div>
 
     <Quotes class="quotes" />
+
+    <svg
+         class="arrow"
+         version="1.1"
+         baseProfile="full"
+         xmlns="http://www.w3.org/2000/svg"
+         width="40" height="40">
+      <polyline stroke-linejoin="miter"
+        points="4,12 20,28 36,12" />
+    </svg>
+
   </div>
 </template>
 
@@ -107,6 +118,26 @@
   opacity: 1;
 }
 
+.arrow {
+  stroke: $dots-border;
+  stroke-width: 4;
+  fill: none;
+  opacity: 0.5;
+  margin: 10px auto;
+
+  // animation: updown 2s cubic-bezier(.5,.5,0,1);
+  // animation-iteration-count: infinite;
+
+  cursor: pointer;
+}
+@keyframes updown {
+  0%   { margin-top: 10px; }
+  25%  { margin-top: 22px; }
+  50%  { margin-top: 10px; }
+  75%  { margin-top: 22px; }
+  100% { margin-top: 10px; }
+}
+
 .pulse {
 	position: absolute;
   left: 50%;
@@ -128,7 +159,6 @@
       animation-iteration-count: infinite;
 		}
 	}
-
 }
 
 @keyframes pulse {
