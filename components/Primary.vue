@@ -51,9 +51,9 @@ export default {
 }
 
 .primary-btn {
-  background-color: $body-bg;
-  color: $dots-border;
-  border: 2px solid $dots-border;
+  background-color: $primary-bg;
+  color: #5086c6;
+  border: 2px solid $primary-bg;
 
   &:hover {
     background-color: $dots-border;

@@ -31,6 +31,8 @@ $body-bg: #fff;
 $dots-border: $green-light;
 $second-slider: #386fad;
 
+$primary-bg: $dots-border;
+
 @mixin boxShadow($val) {
   -webkit-box-shadow: $val;
   -moz-box-shadow: $val;
