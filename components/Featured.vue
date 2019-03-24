@@ -41,7 +41,7 @@ export default {
   padding-top: 32px;
 }
 .background {
-  background-color: $second-slider;
+  background-color: $white-text;
   margin-top: -40px;
   padding: 80px 0;
   text-align: center;

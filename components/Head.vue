@@ -82,7 +82,7 @@
 
 .head-section {
   width: 100%;
-  height: 90vh;
+  height: 93vh;
 
   display: flex;
   flex-direction: column;

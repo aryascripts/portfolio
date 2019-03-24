@@ -40,13 +40,13 @@ export default {
 }
 
 .secondary-btn {
-  background-color: $body-bg;
+  background-color: darken($head-bg, 15%);
   color: $dots-border;
   border: 2px solid $dots-border;
 
   &:hover {
     background-color: $dots-border;
-    color: $body-bg;
+    color: darken($head-bg, 15%);
   }
 }
 

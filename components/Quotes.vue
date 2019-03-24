@@ -37,8 +37,7 @@ export default {
 
 .quote-container {
   width: 90vw;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 30px auto 0 auto;
 }
 
 .quote-box {
@@ -54,7 +53,7 @@ export default {
     width: 85%;
     max-width: $nav-max-width;
     margin: 30px auto;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     letter-spacing: 1px;
 
