@@ -44,7 +44,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/axios'
+    'vue-scrollto/nuxt'
   ],
   markdownit: {
     injected: true,
