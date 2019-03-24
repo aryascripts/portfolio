@@ -4,9 +4,8 @@
     class="card">
 
     <h2>{{ project.title }}</h2>
-    <div class="description">
-      {{ getShortDescription() }}
-    </div>
+    <div class="description"
+        v-html="$md.render(this.project.description)"></div>
 
     <div v-bind:style="{
       backgroundImage: 'url(' + project.thumbnail + ')',
@@ -85,7 +84,8 @@ export default {
   }
 
   h2 {
-    background-color: rgba(0,0,0, 0.25);
+    background-color: lighten($blue-bg, 30%);
+    color: $blue-bg;
     padding: 3px 5px;
   }
 
@@ -101,13 +101,10 @@ export default {
     width: 100%;
     min-width: 200px;
     height: 400px;
+    background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 0 20px 20px 20px;
+    border-radius: 0 20px 0 20px;
     max-height: 500px;
-
-    // animation: bgpan 60s linear;
-    // animation-iteration-count: infinite;
-
   }
 
   @keyframes bgpan {

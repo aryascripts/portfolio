@@ -26,6 +26,23 @@ h2 {
   margin-top: 12px;
 }
 
+a {
+  background-color: lighten(black, 50%);
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  padding: 1px 5px;
+  transition: background-color 250ms linear;
+
+  &:hover {
+    background-color: lighten(black, 60%);
+    cursor: pointer;
+  }
+}
+p {
+  margin-bottom: 10px;
+}
+
 hr {
   opacity: 0.2;
   margin: 18px 0;

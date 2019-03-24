@@ -1,3 +1,4 @@
+const cheerio = require('cheerio')
 module.exports = {
   /*
   ** Headers of the page
@@ -46,10 +47,11 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   markdownit: {
-    'injected': true,
-    'preset': 'default',
-    'linkify': true,
-    'breaks': true,
+    injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    html: true
   },
 
   build: {
