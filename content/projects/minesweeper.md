@@ -9,28 +9,17 @@ skills:
   - skill: HTML/CSS
   - skill: GitHub
 featured: true
-description: >
-  This is a personal project I have worked on in my spare time for fun.
-  Minesweeper is a perfect game to work on in JavaScript.
+description: >-
+  Using Object Oriented Programming in JavaScript, this is a clone of the
+  popular game, Minesweeper, playable on the web. Features include variable grid
+  sizes (small, medium, large, extreme), variable mines per play, animations
+  (on/off), and score keeping. Compete with your friends!
 
 
-  The motivation of this project was to learn more about object oriented
-  programming in JavaScript. The main component (library) used was p5.js. This
-  library helps you with regular game development functions such as setup() and
-  draw(). Along with p5.js, I also used objects such as “cell” and “grid” to for
-  management.
+  Technologies Used: Vanilla JS, [p5.js](https://p5js.org/libraries/), HTML,
+  CSS3
 
 
-  ## Features
-    - Variable sized grids
-    - Different number of mines per play
-    - Restart game without refresh
-    - Score tally
-    - Particles (on/off) upon losing
-
-  The live demo can be found at the following link with the latest updates from
-  GitHub. It is fully playable in a desktop environment. The only thing missing
-  from the mobile environment will be the right-click option for flagging mines
-  – that is a future feature to be implemented.
+  [Code on GitHub](https://github.com/amanb014/Minesweeper)
 ---
 
