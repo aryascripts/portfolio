@@ -16,14 +16,6 @@ description: >-
   of time-data, mark videos watched (auto), and resume partially watched videos.
 
 
-  ## About
-
-
-  This program was made from self-needed playlist manager. The point of this
-  program is to add playlists, watch videos, and keep your place through a
-  sequential or non-sequential playlist.
-
-
   For example, when you start watching a sequential playlist with episodes (ep.
   1, 2, 3 …), and stop at episode 4, after watching six minutes, would you
   remember it? Do you rely on the YouTube history? Simply add your playlist to
@@ -32,10 +24,7 @@ description: >-
   the last position in the last video is loaded automatically!
 
 
-  \## Source
-
-
-  \[View Source on
+  [View Source on
   GitHub](https://github.com/amanb014/viewtube/tree/ng4-rewrite/ng4-rewrite)
 ---
 
