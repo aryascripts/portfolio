@@ -2,10 +2,11 @@
 
   <div class="head-section">
     <div class="pic-info">
-      <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <!-- <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <circle id="Oval" cx="512" cy="512" r="512"></circle>
         <circle id="Oval" cx="512" cy="512" r="512"></circle>
-      </svg>
+      </svg> -->
+      <canvas id="circles" width="500" height="500"></canvas>
         <div class="circle-border">
           <div class="circle-background"></div>
         </div>
@@ -36,7 +37,44 @@
     components: {
       Quotes
     },
-    props: [ 'config' ]
+    props: [ 'config' ],
+
+    mounted: () => {
+      this.canvas = document.querySelector('#circles')
+      this.maxRadius = 400
+      this.context = this.canvas.getContext('2d')
+
+      this.draw = () => {
+        const vw = this.canvas.width
+        const vh = this.canvas.height
+        // this.context.clearRect()
+        // this.context.save()
+        const context = this.canvas.getContext('2d')
+
+        const rings = 1
+
+        for (let i = 0; i < rings; i++) {
+          context.beginPath()
+
+          const x = vw / 2;
+          const y = vh / 2;
+          let radius = 200;
+
+          const start = 0;
+          const end = Math.PI * 2
+
+          context.arc(x, y, ++radius, start, end, true)
+          context.fill()
+        }
+        window.requestAnimationFrame(this.draw)
+      }
+
+      this.draw()
+
+      // window.requestAnimationFrame(this.draw.bind(this))
+
+
+    }
   }
 </script>
 
@@ -49,6 +87,12 @@
   height: 1vh;
   background-color: #FDB798;
   mix-blend-mode: color-dodge;
+}
+
+#circles {
+  position: absolute;
+  margin-top: -50px;
+  margin-top: -174px;
 }
 
 .name, .title {

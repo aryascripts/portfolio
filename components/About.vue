@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="background">
+  <div id="#about" class="background">
     <div class="container">
       <h1>About</h1>
 
