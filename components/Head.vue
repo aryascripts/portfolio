@@ -6,7 +6,7 @@
         <circle id="Oval" cx="512" cy="512" r="512"></circle>
         <circle id="Oval" cx="512" cy="512" r="512"></circle>
       </svg> -->
-      <canvas id="circles" width="500" height="500"></canvas>
+      <canvas id="circles" height="500"></canvas>
         <div class="circle-border">
           <div class="circle-background"></div>
         </div>
@@ -41,40 +41,40 @@
 
     mounted: () => {
       this.canvas = document.querySelector('#circles')
-      this.maxRadius = 400
       this.context = this.canvas.getContext('2d')
 
-      this.draw = () => {
-        const vw = this.canvas.width
-        const vh = this.canvas.height
-        // this.context.clearRect()
-        // this.context.save()
-        const context = this.canvas.getContext('2d')
-
-        const rings = 1
-
-        for (let i = 0; i < rings; i++) {
-          context.beginPath()
-
-          const x = vw / 2;
-          const y = vh / 2;
-          let radius = 200;
-
-          const start = 0;
-          const end = Math.PI * 2
-
-          context.arc(x, y, ++radius, start, end, true)
-          context.fill()
-        }
-        window.requestAnimationFrame(this.draw)
-      }
-
-      this.draw()
-
-      // window.requestAnimationFrame(this.draw.bind(this))
+      this.rings = [{ r: 0 }, { r: 125 }, { r: 200 }]
+      this.MAX_R = 300
 
 
+      this.vw = this.canvas.width = window.innerWidth
+      this.vh = this.canvas.height
+      this.cx = this.vw / 2
+      this.cy = (this.vh / 2) - 25
+
+      this.context.strokeStyle = 'rgba(255, 255, 255, 0.20)'
+      this.context.lineWidth = 30
+
+      window.requestAnimationFrame(updateCanvas.bind(this))
     }
+  }
+
+  function updateCanvas() {
+    const context = this.context
+    context.clearRect(0, 0, this.vw, this.vh)
+
+    for (let i = 0; i < this.rings.length; i++) {
+      const ring = this.rings[i]
+
+      context.globalAlpha = 1 - (++ring.r / this.MAX_R)
+
+      if (ring.r > this.MAX_R) ring.r = 0
+      context.beginPath()
+      context.arc(this.cx, this.cy, ++ring.r, 0, Math.PI * 2)
+      context.stroke()
+    }
+
+    window.requestAnimationFrame(updateCanvas.bind(this))
   }
 </script>
 
