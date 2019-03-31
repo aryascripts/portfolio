@@ -43,7 +43,7 @@
       this.rings = [{ r: 0 }, { r: 125 }, { r: 200 }]
       this.MAX_R = 300
 
-      this.vw = this.canvas.width = window.innerWidth
+      this.vw = this.canvas.width = (window.innerWidth - window.scrollWidth)
       this.vh = this.canvas.height
       this.cx = (this.vw / 2) - 10
       this.cy = (this.vh / 2) - 25
@@ -75,7 +75,7 @@
   }
 
   function handleResize() {
-    this.vw = this.canvas.width = window.innerWidth
+    this.vw = this.canvas.width = (window.innerWidth - window.scrollWidth)
     this.vh = this.canvas.height
     this.cx = (this.vw / 2) - 10
     this.cy = (this.vh / 2) - 25
