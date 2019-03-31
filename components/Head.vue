@@ -4,10 +4,6 @@
     <canvas id="circles" height="500"></canvas>
 
     <div class="pic-info">
-      <!-- <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <circle id="Oval" cx="512" cy="512" r="512"></circle>
-        <circle id="Oval" cx="512" cy="512" r="512"></circle>
-      </svg> -->
         <div class="circle-border">
           <div class="circle-background"></div>
         </div>
@@ -47,16 +43,16 @@
       this.rings = [{ r: 0 }, { r: 125 }, { r: 200 }]
       this.MAX_R = 300
 
-
       this.vw = this.canvas.width = window.innerWidth
       this.vh = this.canvas.height
-      this.cx = this.vw / 2
+      this.cx = (this.vw / 2) - 10
       this.cy = (this.vh / 2) - 25
 
       this.context.strokeStyle = 'rgba(255, 255, 255, 0.20)'
       this.context.lineWidth = 30
 
       window.requestAnimationFrame(updateCanvas.bind(this))
+      window.addEventListener('resize', handleResize.bind(this))
     }
   }
 
@@ -77,6 +73,17 @@
 
     window.requestAnimationFrame(updateCanvas.bind(this))
   }
+
+  function handleResize() {
+    this.vw = this.canvas.width = window.innerWidth
+    this.vh = this.canvas.height
+    this.cx = (this.vw / 2) - 10
+    this.cy = (this.vh / 2) - 25
+
+    this.context.strokeStyle = 'rgba(255, 255, 255, 0.20)'
+    this.context.lineWidth = 30
+  }
+
 </script>
 
 
