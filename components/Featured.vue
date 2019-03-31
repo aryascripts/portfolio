@@ -12,7 +12,7 @@
 
       <Primary
         class="resume-button"
-        v-bind:type="'primary'"
+        v-bind:type="'secondary'"
         v-bind:text="'View All Projects'" />
   </div>
 </template>

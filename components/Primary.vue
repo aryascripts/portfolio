@@ -42,22 +42,20 @@ export default {
 .secondary-btn {
   background-color: darken($head-bg, 15%);
   color: $dots-border;
-  border: 2px solid $dots-border;
 
   &:hover {
-    background-color: $dots-border;
-    color: darken($head-bg, 15%);
+    background-color: $head-bg;
+    color: $dots-border;
   }
 }
 
 .primary-btn {
   background-color: $primary-bg;
   color: #5086c6;
-  border: 2px solid $primary-bg;
 
   &:hover {
-    background-color: darken($blue-bg, 15%);
-    color: $dots-border;
+    background-color: lighten($primary-bg, 10%);
+    color: #5086c6;
   }
 }
 
