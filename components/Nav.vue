@@ -7,6 +7,7 @@
     </div>
 
     <Primary
+      class="reach-out"
       v-bind:type="'primary'"
       v-bind:text="'Reach Out'" />
   </div>
@@ -20,20 +21,6 @@ export default {
   components: {
     Primary,
     Logo
-  },
-  data: () => {
-    return {
-      darkNav: false
-    }
-  },
-  methods: {
-
-  },
-  beforeMount () {
-    window.addEventListener('scroll', this.getBackgroundColor);
-  },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.getBackgroundColor);
   }
 }
 </script>
@@ -48,7 +35,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  z-index: $nav-z;
+  z-index: $content-z;
   padding: 0 2vw;
   align-items: center;
 
@@ -59,5 +46,9 @@ export default {
   .logo {
     width: 42px;
   }
+}
+
+.reach-out {
+  z-index: $content-z;
 }
 </style>

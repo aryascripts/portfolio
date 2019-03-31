@@ -1,12 +1,13 @@
 <template>
 
   <div class="head-section">
+    <canvas id="circles" height="500"></canvas>
+
     <div class="pic-info">
       <!-- <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <circle id="Oval" cx="512" cy="512" r="512"></circle>
         <circle id="Oval" cx="512" cy="512" r="512"></circle>
       </svg> -->
-      <canvas id="circles" height="500"></canvas>
         <div class="circle-border">
           <div class="circle-background"></div>
         </div>
@@ -82,6 +83,10 @@
 <style scoped lang="scss">
 @import './../sass/vars.scss';
 
+.pic-info {
+  z-index: $content-z;
+}
+
 .line {
   width: 100%;
   height: 1vh;
@@ -93,6 +98,7 @@
   position: absolute;
   margin-top: -50px;
   margin-top: -174px;
+  z-index: $animation-z;
 }
 
 .name, .title {
