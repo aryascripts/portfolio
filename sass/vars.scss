@@ -38,7 +38,7 @@ $primary-bg: $dots-border;
 
 // Z-INDEX
 $content-z: 10;
-$animation-z: 0;
+$animation-z: 1;
 
 @mixin boxShadow($val) {
   -webkit-box-shadow: $val;

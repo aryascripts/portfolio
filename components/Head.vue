@@ -43,9 +43,9 @@
       this.rings = [{ r: 0 }, { r: 125 }, { r: 200 }]
       this.MAX_R = 300
 
-      this.vw = this.canvas.width = (window.innerWidth - window.scrollWidth)
+      this.vw = this.canvas.width = document.scrollingElement.clientWidth
       this.vh = this.canvas.height
-      this.cx = (this.vw / 2) - 10
+      this.cx = (this.vw / 2)
       this.cy = (this.vh / 2) - 25
 
       this.context.strokeStyle = 'rgba(255, 255, 255, 0.20)'
@@ -75,9 +75,9 @@
   }
 
   function handleResize() {
-    this.vw = this.canvas.width = (window.innerWidth - window.scrollWidth)
+    this.vw = this.canvas.width = document.scrollingElement.clientWidth
     this.vh = this.canvas.height
-    this.cx = (this.vw / 2) - 10
+    this.cx = (this.vw / 2)
     this.cy = (this.vh / 2) - 25
 
     this.context.strokeStyle = 'rgba(255, 255, 255, 0.20)'
