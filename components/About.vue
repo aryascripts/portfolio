@@ -9,7 +9,7 @@
         </div>
 
         <Primary class="learn-more"
-          v-bind:type="'secondary'"
+          v-bind:type="'primary'"
           v-bind:text="'Learn More'" />
     </div>
   </div>
