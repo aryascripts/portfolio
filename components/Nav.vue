@@ -1,5 +1,7 @@
 <template lang="html">
-  <div class="nav">
+  <div
+    class="nav"
+    v-bind:style="{'background-color': bgColor}">
 
     <div class="logo">
       <Logo
@@ -18,6 +20,7 @@ import Primary from './Primary.vue'
 import Logo from './Logo.vue'
 
 export default {
+  props: [ 'bgColor' ],
   components: { Primary, Logo }
 }
 </script>
