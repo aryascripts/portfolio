@@ -34,9 +34,6 @@ export default {
 <style scoped lang="scss">
 @import './../sass/vars.scss';
 
-.padding {
-  padding-top: 32px;
-}
 .background {
   background-color: $white-text;
   margin-top: -40px;
