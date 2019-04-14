@@ -1,4 +1,5 @@
 const FilesWorker = require('./filesWorker.js')
+const GoodReads = require('./goodreads.js')
 
 // Store all content to JSON
 storeContent().catch(e => console.error(e))
@@ -10,6 +11,9 @@ async function storeContent() {
 
   // store projects
   await storeProjects()
+
+  // get goodreads and store JSON
+  await storeGoodreadsInfo();
 }
 
 async function storeSiteInfo() {
@@ -22,6 +26,14 @@ async function storeProjects() {
   const projectWorker = new FilesWorker('./../content/projects')
   const projectInfo = await projectWorker.getFiles()
   FilesWorker.WriteJSONToFile('./../content/projects.json', projectInfo, print.bind(this, 'project information.'))
+}
+
+async function storeGoodreadsInfo() {
+  const goodreadsWorker = new FilesWorker('./../content/goodreads')
+  const info = await GoodReads.getCurrentlyReading()
+  FilesWorker.WriteJSONToFile('./../content/goodreads.json',
+    { current: info, favorites: {} },
+    print.bind(this, 'goodreads info'))
 }
 
 function print(message) {

@@ -18,7 +18,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt JS portfolio' }
+      { hid: 'description', name: 'description',
+        content: 'Aman Bhimani - Software Engineer based in Atlanta, Georgia. Personal and Professional portfolio; welcome to my little cornder of the internet!' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
