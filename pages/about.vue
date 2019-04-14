@@ -16,6 +16,10 @@
         <h1>READING & LEARNING</h1>
       </div>
 
+      <BookList
+        v-bind:title="'Currently Reading'"
+        v-bind:books="current" />
+
     </div>
 
 
@@ -28,13 +32,14 @@ import SiteData from '~/requests/content.js'
 import Nav from '~/components/Nav.vue'
 import Paragraph from '~/components/Paragraph.vue'
 import Featured from '~/components/Featured.vue'
-
+import BookList from '~/components/BookList.vue'
 
 export default {
-  components: { Nav, Paragraph, Featured },
+  components: { Nav, Paragraph, Featured, BookList },
   async asyncData() {
     return {
-      about: SiteData.getAboutPagePara()
+      about: SiteData.getAboutPagePara(),
+      current: SiteData.getCurrentlyReading()
     }
   }
 }
