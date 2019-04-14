@@ -6,7 +6,9 @@
       <Head v-bind:config="{ title: title, name: name }" />
     </div>
 
-    <About v-bind:about="about"/>
+    <Paragraph
+      v-bind:text="about"
+      v-bind:btnText="'Learn More'" />
 
     <Featured v-bind:projects="featured"/>
   </div>
@@ -15,7 +17,7 @@
 <script>
 import Head from '~/components/Head.vue'
 import Featured from '~/components/Featured.vue'
-import About from '~/components/About.vue'
+import Paragraph from '~/components/Paragraph.vue'
 import SiteData from '~/requests/content.js'
 import Nav from '~/components/Nav.vue'
 
@@ -23,7 +25,7 @@ export default {
   components: {
     Head,
     Featured,
-    About,
+    Paragraph,
     Nav
   },
   async asyncData() {

@@ -1,14 +1,17 @@
 <template lang="html">
-  <div id="#about" class="background">
+  <div
+    v-bind:class="{slant: !noSlant }"
+    class="background">
     <div class="container">
-      <h1>About</h1>
+      <h1>{{ title || 'ABOUT' }}</h1>
 
         <div
             class="about-text"
-            v-html="$md.render(about)">
+            v-html="$md.render(text)">
         </div>
 
-        <Primary class="learn-more"
+        <Primary v-if="btnText"
+          class="learn-more"
           v-bind:type="'primary'"
           v-bind:text="'Learn More'" />
     </div>
@@ -22,7 +25,7 @@ import Primary from './Primary.vue'
 
 export default {
   components: { Primary },
-  props: ['about']
+  props: [ 'text', 'btnText', 'btnLink', 'noSlant', 'title' ]
 }
 </script>
 
@@ -46,9 +49,12 @@ export default {
 
 .background {
   background-color: darken($head-bg, 15%);
-  @extend %right-down;
   padding: 0 20px;
   margin: -35px 0 0 0;
+}
+
+.slant {
+  @extend %right-down;
 }
 
 h1 {
