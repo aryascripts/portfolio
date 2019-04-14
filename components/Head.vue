@@ -31,9 +31,7 @@
   import Quotes from './Quotes.vue'
 
   export default {
-    components: {
-      Quotes
-    },
+    components: { Quotes },
     props: [ 'config' ],
 
     mounted: () => {

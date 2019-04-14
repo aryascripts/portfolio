@@ -24,11 +24,7 @@ import SiteData from './../requests/content.js'
 import Primary from './Primary.vue'
 
 export default {
-  components: {
-    Quotes,
-    Primary,
-    Collection
-  },
+  components: { Quotes, Primary, Collection },
   props: ['projects']
 }
 

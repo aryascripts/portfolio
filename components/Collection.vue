@@ -15,9 +15,7 @@
 import Card from './Card.vue'
 
 export default {
-  components: {
-    Card
-  },
+  components: { Card },
   props: ['projects', 'name']
 }
 </script>

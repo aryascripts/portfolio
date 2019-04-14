@@ -17,21 +17,7 @@
 
   </div>
 
-  <!-- <div
-    v-else-if="text"
-    class="card rounded">
-
-    <div
-      v-html="text"
-      class="content textonly">
-    </div>
-  </div> -->
-
 </template>
-
-<!-- v-bind:style="{
-  'backgroundImage': `url(${require('@/static/images/'+ project.images[0] ) })`
-  }" -->
 
 <script>
 import SiteData from './../utils/content'

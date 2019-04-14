@@ -21,9 +21,7 @@ import SiteData from './../utils/content.js'
 import Primary from './Primary.vue'
 
 export default {
-  components: {
-    Primary
-  },
+  components: { Primary },
   props: ['about']
 }
 </script>

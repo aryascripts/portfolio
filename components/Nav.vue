@@ -18,10 +18,7 @@ import Primary from './Primary.vue'
 import Logo from './Logo.vue'
 
 export default {
-  components: {
-    Primary,
-    Logo
-  }
+  components: { Primary, Logo }
 }
 </script>
 
