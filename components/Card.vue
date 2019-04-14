@@ -20,27 +20,13 @@
 </template>
 
 <script>
-import SiteData from './../utils/content'
-import { getReadableDate } from './../utils/functions'
 
 export default {
   props: [
     'project',
     'text',
     'num'
-  ],
-  methods: {
-    getThumbnail() {
-      return '@/static/images/viewtube1.png'
-    },
-    getShortDescription() {
-      return this.project.description.split('\n')[0]
-    }
-  },
-  computed: {},
-  beforeCreate() {
-    this.getReadableDate = getReadableDate;
-  }
+  ]
 }
 
 </script>

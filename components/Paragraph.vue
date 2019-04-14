@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import SiteData from './../utils/content.js'
+import SiteData from '~/requests/content.js'
 import Primary from './Primary.vue'
 
 export default {
