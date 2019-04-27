@@ -6,7 +6,7 @@
     <div v-if="!open" class="description">
       {{ parseHtml(book.description, true) }}
       <br />
-      <a class="right" v-on:click="openDesc()">Read More.</a>
+      <a class="right" v-on:click="openDesc()">Read More</a>
     </div>
     <div v-if="open" class="description">
       {{ parseHtml(book.description) }}

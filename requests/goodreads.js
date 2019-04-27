@@ -3,7 +3,7 @@ const parser = require('fast-xml-parser')
 
 const getGoodreadsUrl = (shelfName) => {
   const key = process.env.GOODREADS_KEY
-  const uid = '40064988'
+  const uid = process.env.UID
   return `https://www.goodreads.com/review/list.xml?key=${key}&v=2&id=${uid}&shelf=${shelfName}&sort=date_added&order=d`
 }
 
