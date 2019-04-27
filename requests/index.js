@@ -30,9 +30,11 @@ async function storeProjects() {
 
 async function storeGoodreadsInfo() {
   const goodreadsWorker = new FilesWorker('./../content/goodreads')
-  const info = await GoodReads.getCurrentlyReading()
+  const current = await GoodReads.getCurrentlyReading()
+  const favs = await GoodReads.getFavoriteBooks()
+
   FilesWorker.WriteJSONToFile('./../content/goodreads.json',
-    { current: info, favorites: {} },
+    { current: current, favorites: favs },
     print.bind(this, 'goodreads info'))
 }
 

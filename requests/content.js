@@ -15,9 +15,8 @@ class SiteData {
   getAboutText() { return this.site.about }
   getAboutPagePara() { return this.site.aboutPage }
 
-  getCurrentlyReading() {
-    return this.goodreads.current.GoodreadsResponse.reviews.review.slice(0, 5)
-  }
+  getCurrentlyReading() { return this.goodreads.current.GoodreadsResponse.reviews.review.slice(0, 5) }
+  getFavoriteBooks() { return this.goodreads.favorites.GoodreadsResponse.reviews.review.slice(0, 5) }
 
   getFeaturedProjects() {
     return this.projects.filter(project => project.featured)

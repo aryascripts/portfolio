@@ -1,7 +1,7 @@
 {
-  "name": "nuxt",
-  "version": "1.0.0",
-  "description": "Nuxt JS portfolio",
+  "name": "aman-portfolio",
+  "version": "0.2.0",
+  "description": "Aman Bhimani's portfolio hosted on amanbhimani.com",
   "author": "Aman Bhimani <amanb014@gmail.com>",
   "private": true,
   "scripts": {
@@ -21,7 +21,8 @@
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.4",
     "fast-xml-parser": "^3.12.12",
-    "nuxt": "^1.4.2",
+    "lodash.unescape": "^4.0.1",
+    "nuxt": "^2.6.3",
     "vue-scrollto": "^2.15.0",
     "xmldom": "^0.1.27",
     "yamljs": "^0.3.0"
@@ -34,7 +35,7 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0"

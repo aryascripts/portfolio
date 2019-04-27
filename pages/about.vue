@@ -12,13 +12,16 @@
     </div>
 
     <div class="background slant">
-      <div class="container">
-        <h1>READING & LEARNING</h1>
-      </div>
+      <h1>READING & LEARNING</h1>
+      <div class="book-lists">
+        <BookList
+          v-bind:title="'Currently Reading'"
+          v-bind:books="current" />
 
-      <BookList
-        v-bind:title="'Currently Reading'"
-        v-bind:books="current" />
+        <BookList
+          v-bind:title="'Favorite Books'"
+          v-bind:books="favs" />
+      </div>
 
     </div>
 
@@ -37,9 +40,11 @@ import BookList from '~/components/BookList.vue'
 export default {
   components: { Nav, Paragraph, Featured, BookList },
   async asyncData() {
+    console.log(SiteData.getCurrentlyReading())
     return {
       about: SiteData.getAboutPagePara(),
-      current: SiteData.getCurrentlyReading()
+      current: SiteData.getCurrentlyReading(),
+      favs: SiteData.getFavoriteBooks()
     }
   }
 }
@@ -58,6 +63,13 @@ export default {
 
 .slant {
   @extend %right-down;
+}
+
+.book-lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 </style>

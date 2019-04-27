@@ -7,7 +7,7 @@ const getGoodreadsUrl = (shelfName) => {
   return `https://www.goodreads.com/review/list.xml?key=${key}&v=2&id=${uid}&shelf=${shelfName}&sort=date_added&order=d`
 }
 
-const getBooksFromShelf = async (user, shelf) => {
+const getBooksFromShelf = async (shelf) => {
   const options = {
         attributeNamePrefix : "@_",
         attrNodeName: "attr", //default is 'false'
@@ -25,7 +25,7 @@ const getBooksFromShelf = async (user, shelf) => {
     };
 
 
-  const xml = await axios.get(getGoodreadsUrl('currently_reading'));
+  const xml = await axios.get(getGoodreadsUrl(shelf));
   const data = xml.data;
 
   if(parser.validate(data) === true) { //optional (it'll return an object in case it's not valid)
@@ -35,5 +35,6 @@ const getBooksFromShelf = async (user, shelf) => {
 }
 
 module.exports = {
-  getCurrentlyReading: () => getBooksFromShelf()
+  getCurrentlyReading: () => getBooksFromShelf('currently-reading'),
+  getFavoriteBooks: () => getBooksFromShelf('favorites')
 }

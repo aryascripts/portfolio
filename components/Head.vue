@@ -34,7 +34,7 @@
     components: { Quotes },
     props: [ 'config' ],
 
-    mounted: () => {
+    mounted() {
       this.canvas = document.querySelector('#circles')
       this.context = this.canvas.getContext('2d')
 

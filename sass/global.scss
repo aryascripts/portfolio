@@ -8,6 +8,7 @@
 }
 %header-font {
   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -108,7 +109,14 @@ body {
   margin: 0 auto;
 }
 
-
 .padding {
   padding: 32px 0;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }

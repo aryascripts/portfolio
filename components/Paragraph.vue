@@ -1,7 +1,7 @@
 <template lang="html">
   <div
     v-bind:class="{slant: !noSlant }"
-    class="background">
+    class="background-para">
     <div class="container">
       <h1>{{ title || 'ABOUT' }}</h1>
 
@@ -47,7 +47,7 @@ export default {
   }
 }
 
-.background {
+.background-para {
   background-color: darken($head-bg, 15%);
   padding: 0 20px;
   margin: -35px 0 0 0;

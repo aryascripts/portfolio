@@ -1,18 +1,5 @@
 const cheerio = require('cheerio')
 module.exports = {
-  /*
-  ** Headers of the page
-  */
-  hooks: {
-    // This hook is called before rendering the html to the browser
-    'render:route': (url, result) => {
-      this.$ = cheerio.load(html)
-      this.$('#__nuxt').removeAttr('data-server-rendered').removeAttr('id')
-      this.$(`body script[src="/_nuxt/app.js"]`).remove()
-      this.$(`head link[href="/_nuxt/app.js"]`).remove()
-      result.html = this.$.html()
-    }
-  },
   head: {
     title: 'Aman Bhimani: Portfolio',
     meta: [
@@ -23,9 +10,6 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Trochut'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Imprima'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:200' }
     ],
     script: [
@@ -39,10 +23,6 @@ module.exports = {
   /*
   ** Build configuration
   */
-
-  plugins: [
-    '~/plugins/directives.js'
-  ],
   modules: [
     '@nuxtjs/markdownit',
     'vue-scrollto/nuxt'
@@ -53,24 +33,5 @@ module.exports = {
     linkify: true,
     breaks: true,
     html: true
-  },
-
-  build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-      config.node = {
-        fs: 'empty'
-      }
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
   }
 }
