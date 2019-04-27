@@ -7,6 +7,7 @@
     </div>
 
     <Paragraph
+      v-bind:btnLink="'/about'"
       v-bind:text="about"
       v-bind:btnText="'Learn More'" />
 

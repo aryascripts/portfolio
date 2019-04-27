@@ -3,10 +3,10 @@
     class="nav"
     v-bind:style="{'background-color': bgColor}">
 
-    <div class="logo">
+    <nuxt-link to="/" class="logo">
       <Logo
         v-bind:fillColor="'#f1ffe7'" />
-    </div>
+    </nuxt-link>
 
     <Primary
       class="reach-out"
@@ -45,6 +45,7 @@ export default {
 
   .logo {
     width: 42px;
+    background-color: transparent;
   }
 }
 

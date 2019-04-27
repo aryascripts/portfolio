@@ -11,6 +11,7 @@
         </div>
 
         <Primary v-if="btnText"
+          v-bind:link="btnLink"
           class="learn-more"
           v-bind:type="'primary'"
           v-bind:text="'Learn More'" />
@@ -25,7 +26,7 @@ import Primary from './Primary.vue'
 
 export default {
   components: { Primary },
-  props: [ 'text', 'btnText', 'btnLink', 'noSlant', 'title' ]
+  props: [ 'text', 'btnText', 'btnLink', 'noSlant', 'title', 'btnLink' ]
 }
 </script>
 

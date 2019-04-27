@@ -1,18 +1,18 @@
 <template lang="html">
-  <div
+  <nuxt-link :to="{path: link }"
     v-bind:class="{
       'secondary-btn': type === 'secondary',
       'primary-btn': type === 'primary'
       }"
     class="btn pointer">
     {{ text }}
-  </div>
+  </nuxt-link>
 
 </template>
 
 <script>
 export default {
-  props: [ 'text', 'type' ]
+  props: [ 'text', 'type', 'link']
 }
 </script>
 
