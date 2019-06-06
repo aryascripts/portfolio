@@ -19,7 +19,9 @@ class SiteData {
   getFavoriteBooks() { return this.goodreads.favorites.GoodreadsResponse.reviews.review.slice(0, 5) }
 
   getFeaturedProjects() {
-    return this.projects.filter(project => project.featured)
+    return this.projects
+            .filter(project => project.featured)
+            .sort((p1, p2) => p1.order - p2.order)
   }
 }
 
