@@ -14,6 +14,10 @@
         v-bind:type="'primary'"
         v-bind:text="'Reach Out'" />
 
+      <div class="item">
+        <a v-bind:href="resumeLink" target="_blank">Resume</a>
+      </div>
+
       <nuxt-link to="/about" class="item">
         About
       </nuxt-link>
@@ -21,6 +25,7 @@
       <nuxt-link to="/work" class="item">
         Work
       </nuxt-link>
+
     </div>
 
   </div>
@@ -29,9 +34,10 @@
 <script>
 import Primary from './Primary.vue'
 import Logo from './Logo.vue'
+import SiteData from './../requests/content.js'
 
 export default {
-  props: [ 'bgColor' ],
+  props: [ 'bgColor', 'resumeLink'],
   components: { Primary, Logo }
 }
 </script>
@@ -69,11 +75,14 @@ export default {
       margin-right: 25px;
       cursor: pointer;
       z-index: $content-z;
-      background-color: transparent;
       @extend %header-font;
       font-weight: 600;
     }
   }
+}
+
+a, a:hover {
+  background-color: transparent;
 }
 
 .reach-out {

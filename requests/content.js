@@ -14,6 +14,7 @@ class SiteData {
   getTitle() { return this.site.title }
   getAboutText() { return this.site.about }
   getAboutPagePara() { return this.site.aboutPage }
+  getResumeLink() { return this.site.resume_link }
 
   getCurrentlyReading() { return this.goodreads.current.GoodreadsResponse.reviews.review.slice(0, 5) }
   getFavoriteBooks() { return this.goodreads.favorites.GoodreadsResponse.reviews.review.slice(0, 5) }

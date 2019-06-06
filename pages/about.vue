@@ -2,7 +2,9 @@
   <div>
 
     <div class="head-nav">
-      <Nav v-bind:bgColor="'#316097'"/>
+      <Nav
+        v-bind:resumeLink="resumeLink"
+        v-bind:bgColor="'#316097'"/>
 
       <Paragraph
         v-bind:title="'GETTING PERSONAL'"
@@ -44,7 +46,8 @@ export default {
     return {
       about: SiteData.getAboutPagePara(),
       current: SiteData.getCurrentlyReading(),
-      favs: SiteData.getFavoriteBooks()
+      favs: SiteData.getFavoriteBooks(),
+      resumeLink: SiteData.getResumeLink()
     }
   }
 }

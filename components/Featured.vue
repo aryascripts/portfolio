@@ -20,7 +20,6 @@
 <script>
 import Quotes from './Quotes.vue'
 import Collection from './Collection.vue'
-import SiteData from './../requests/content.js'
 import Primary from './Primary.vue'
 
 export default {

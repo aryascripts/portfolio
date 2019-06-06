@@ -2,7 +2,7 @@
   <div>
 
     <div class="head-nav">
-      <Nav />
+      <Nav v-bind:resumeLink="resumeLink"/>
       <Head v-bind:config="{ title: title, name: name }" />
     </div>
 
@@ -34,7 +34,8 @@ export default {
       title: SiteData.getTitle(),
       name: SiteData.getName(),
       about: SiteData.getAboutText(),
-      featured: SiteData.getFeaturedProjects()
+      featured: SiteData.getFeaturedProjects(),
+      resumeLink: SiteData.getResumeLink()
     }
   }
 }
