@@ -8,10 +8,21 @@
         v-bind:fillColor="'#f1ffe7'" />
     </nuxt-link>
 
-    <Primary
-      class="reach-out"
-      v-bind:type="'primary'"
-      v-bind:text="'Reach Out'" />
+    <div class="right-menu">
+      <Primary
+        class="reach-out"
+        v-bind:type="'primary'"
+        v-bind:text="'Reach Out'" />
+
+      <nuxt-link to="/about" class="item">
+        About
+      </nuxt-link>
+
+      <nuxt-link to="/work" class="item">
+        Work
+      </nuxt-link>
+    </div>
+
   </div>
 </template>
 
@@ -46,6 +57,22 @@ export default {
   .logo {
     width: 42px;
     background-color: transparent;
+  }
+
+  .right-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .item {
+      margin-right: 25px;
+      cursor: pointer;
+      z-index: $content-z;
+      background-color: transparent;
+      @extend %header-font;
+      font-weight: 600;
+    }
   }
 }
 

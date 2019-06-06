@@ -43,6 +43,9 @@ collections:
       - label: Description
         name: description
         widget: markdown
+      - label: Order
+        name: description
+        widget: number
   - name: site_settings
     label: Site Settings
     folder: content/site
