@@ -21,5 +21,6 @@ description: >-
 
 
   [Code on GitHub](https://github.com/amanb014/Minesweeper)
+order: 2
 ---
 
