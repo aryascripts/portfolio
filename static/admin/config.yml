@@ -44,7 +44,7 @@ collections:
         name: description
         widget: markdown
       - label: Order
-        name: description
+        name: order
         widget: number
   - name: site_settings
     label: Site Settings
