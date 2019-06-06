@@ -17,5 +17,6 @@ description: >-
 
 
   [Code on GitHub](https://github.com/amanb014/connect4)
+order: 3
 ---
 
