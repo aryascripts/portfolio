@@ -1,7 +1,7 @@
 <template>
 
   <div class="head-section">
-    <canvas id="circles" height="500"></canvas>
+    <canvas id="circles" height="800"></canvas>
 
     <div class="pic-info">
         <div class="circle-border">
@@ -102,7 +102,7 @@
 #circles {
   position: absolute;
   margin-top: -50px;
-  margin-top: -174px;
+  margin-top: -322px;
   z-index: $animation-z;
 }
 
@@ -153,7 +153,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 8vh;
+  padding-top: 24vh;
 }
 
 .pic-info {
