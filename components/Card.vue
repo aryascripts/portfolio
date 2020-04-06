@@ -77,6 +77,7 @@ export default {
     background-size: cover;
     border-radius: 0 20px 0 20px;
     max-height: 500px;
+    background-position: 50% 0;
   }
 
   @keyframes bgpan {
