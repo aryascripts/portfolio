@@ -11,7 +11,7 @@
       v-bind:text="about"
       v-bind:btnText="'Learn More'" />
 
-    <Featured v-bind:projects="featured"/>
+    <Featured v-bind:title="'FEATURED WORK'" v-bind:projects="featured"/>
   </div>
 </template>
 

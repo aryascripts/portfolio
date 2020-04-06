@@ -2,7 +2,7 @@
   <div class="background">
 
     <div class="container padding">
-      <h1>FEATURED WORK</h1>
+      <h1>{{ title }}</h1>
     </div>
 
     <Collection
@@ -11,8 +11,10 @@
 
 
       <Primary
+        v-if="!showall"
         class="resume-button"
         v-bind:type="'secondary'"
+        v-bind:link="'work'"
         v-bind:text="'View All Projects'" />
   </div>
 </template>
@@ -24,7 +26,7 @@ import Primary from './Primary.vue'
 
 export default {
   components: { Quotes, Primary, Collection },
-  props: ['projects']
+  props: ['projects', 'title', 'showall']
 }
 
 

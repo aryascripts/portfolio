@@ -24,6 +24,8 @@ aboutPage: >-
   Below are some of the ways you can get to know me. If you would like to
   comment on any of these - please feel free to reach out and have a chat
   (button at the top right)!
+workPage: >-
+  Test for the work page here
 quotes:
   - author: Albert Einstein
     quote: >-

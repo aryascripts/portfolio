@@ -67,6 +67,9 @@ collections:
       - label: About Page Para
         name: aboutPage
         widget: markdown
+      - label: Work Page Para
+        name: workPage
+        widget: markdown
       - label: Quotes
         name: quotes
         widget: list

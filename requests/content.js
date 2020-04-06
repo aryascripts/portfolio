@@ -14,6 +14,7 @@ class SiteData {
   getTitle() { return this.site.title }
   getAboutText() { return this.site.about }
   getAboutPagePara() { return this.site.aboutPage }
+  getWorkPagePara() { return this.site.workPage }
   getResumeLink() { return this.site.resume_link }
 
   getCurrentlyReading() { return this.goodreads.current.GoodreadsResponse.reviews.review.slice(0, 5) }
@@ -23,6 +24,10 @@ class SiteData {
     return this.projects
             .filter(project => project.featured)
             .sort((p1, p2) => p1.order - p2.order)
+  }
+  getAllProjects() {
+    return this.projects
+            .sort((p1, p2) => p1.order - p2.order);
   }
 }
 
