@@ -16,14 +16,15 @@
 
 
       <div class="menu">
-        <div class="flex-row selected-item pointer">
+        <div v-on:click="toggleMenu"
+             class="flex-row selected-item pointer">
           <div class="selected-content">
             {{ activePage }}
           </div>
           <img class="caret" :src="Caret" />
         </div>
 
-        <div class="menu-items">
+        <div v-if="navOpen" class="menu-items">
           <nuxt-link to="/" class="item">
             Home
           </nuxt-link>
@@ -58,12 +59,32 @@ export default {
   components: { Primary, Logo, Caret },
   data: () => ({
     Caret,
-    activePage: 'Home'
+    activePage: 'Home',
+    navOpen: false
   }),
   methods: {
+    // Sets the active name of the page. If index, we need to display "Home"
     setActivePage(routeName) {
       this.activePage = routeName === 'index' ? 'Home' 
                                               : routeName;
+    },
+    
+    // toggles menu on and off
+    toggleMenu() {
+      this.setMenu(!this.navOpen);
+    },
+
+    // Open and close
+    openMenu() {
+      this.setMenu(true);
+    },
+    closeMenu() {
+      this.setMenu(false);
+    },
+
+    // Opens menu
+    setMenu(val) {
+      this.navOpen = val;
     }
   },
   mounted() {
@@ -132,10 +153,26 @@ export default {
       padding: 2px 23px 2px 0;
       text-align: right;
 
+      &:hover {
+        background: rgba(255,255,255,0.30);
+      }
+
+      &:last-child {
+        border-radius: 0 0 10px 10px;
+      }
+
+      &:first-child {
+        border-radius: 10px 10px 0 0;
+      }
+
       a {
         padding: 0;
       }
     }
+  }
+
+  .menu {
+    z-index: $content-z;
   }
 
   .menu-items {
@@ -144,7 +181,7 @@ export default {
     flex-direction: column;
     margin: 0 0 0 -42px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.20);
     width: 120px;
   }
 }
