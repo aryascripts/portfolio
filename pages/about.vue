@@ -42,7 +42,6 @@ import BookList from '~/components/BookList.vue'
 export default {
   components: { Nav, Paragraph, Featured, BookList },
   async asyncData() {
-    console.log(SiteData.getCurrentlyReading())
     return {
       about: SiteData.getAboutPagePara(),
       current: SiteData.getCurrentlyReading(),
