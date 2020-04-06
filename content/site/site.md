@@ -24,6 +24,12 @@ aboutPage: >-
   Below are some of the ways you can get to know me. If you would like to
   comment on any of these - please feel free to reach out and have a chat
   (button at the top right)!
+workPage: >-
+  To be completely current with me - for the last few years, I have been focused
+  on Full-Stack Software Development. What does this mean? I can write front-end
+  and back-end code for your websites. I have large experience with Angular 2+,
+  and React enterprise applications. On the back-end, using Node.js to interact
+  with databases, APIs, proxies, and file-system interactions.
 quotes:
   - author: Albert Einstein
     quote: >-
@@ -32,4 +38,3 @@ quotes:
   - author: Napoleon Hill
     quote: 'If you cannot do great things, do small things in a great way.'
 ---
-
