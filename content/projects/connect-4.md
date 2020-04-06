@@ -9,7 +9,7 @@ skills:
   - skill: Design
   - skill: GitHub
   - skill: HTML/CSS3
-featured: true
+featured: false
 description: >-
   Classic Connect 4 game written in Vanilla JS, HTML, and CSS3 for animations
   and styling. Each player gets to enter their name for pseudo-points assigned
@@ -19,4 +19,3 @@ description: >-
   [Code on GitHub](https://github.com/amanb014/connect4)
 order: 3
 ---
-
