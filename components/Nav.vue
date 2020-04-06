@@ -21,7 +21,7 @@
           <div class="selected-content">
             {{ activePage }}
           </div>
-          <img class="caret" :src="Caret" />
+          <img class="caret" v-bind:class="{rotate: navOpen}" :src="Caret" />
         </div>
 
         <div v-if="navOpen" class="menu-items">
@@ -127,6 +127,8 @@ export default {
     .caret {
       width: 16px;
       margin: 0 0 0 4px;
+      -webkit-transition: transform 200ms ease-in;
+      transition: transform 200ms ease-in;
     }
   }
 
@@ -192,6 +194,10 @@ a, a:hover {
 
 .reach-out {
   z-index: $content-z;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 img {
