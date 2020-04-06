@@ -110,3 +110,25 @@ body {
   -o-transition: $args;
   transition: $args;
 }
+
+
+// GENERIC
+.flex { display: flex; }
+.flex-row { 
+  @extend .flex; 
+  flex-direction: row; }
+.flex-col {
+  @extend .flex;
+  flex-direction: column;
+}
+.row-a-c { 
+  @extend .flex-row;
+  align-content: center; }
+
+.col-a-c {
+  @extend .flex-col;
+  align-content: center;
+}
+
+// POINTERS
+.pointer { cursor: pointer; }

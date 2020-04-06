@@ -48,11 +48,11 @@ export default {
 
 .primary-btn {
   background-color: $primary-bg;
-  color: #5086c6;
+  color: $primary;
 
   &:hover {
     background-color: lighten($primary-bg, 10%);
-    color: #5086c6;
+    color: $primary;
   }
 }
 

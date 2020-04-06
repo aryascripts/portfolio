@@ -21,7 +21,6 @@ $highest-z: 1000;
 $nav-z: $highest-z;
 $card-radius: 25px;
 
-
 // WIDTHS
 $nav-max-width: 800px;
 $nav-height: 60px;
@@ -34,7 +33,6 @@ $card-overlap: 45px;
   to   { opacity: 1; }
 }
 
-
 // NEWEST COLORS
 $body-bg: #fff;
 $dots-border: $green-light;
@@ -45,7 +43,7 @@ $head-bg: $blue-bg;
 $head-bg-15: darken($head-bg, 15%);
 
 $primary-bg: $dots-border;
-
+$primary: #5086c6;
 
 // Z-INDEX
 $content-z: 10;
