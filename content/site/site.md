@@ -24,12 +24,18 @@ aboutPage: >-
   Below are some of the ways you can get to know me. If you would like to
   comment on any of these - please feel free to reach out and have a chat
   (button at the top right)!
-workPage: >-
-  To be completely current with me - for the last few years, I have been focused
-  on Full-Stack Software Development. What does this mean? I can write front-end
-  and back-end code for your websites. I have large experience with Angular 2+,
-  and React enterprise applications. On the back-end, using Node.js to interact
-  with databases, APIs, proxies, and file-system interactions.
+workPage: >+
+  My passion is to bring my work to life - in the last 5 years, I have found
+  full-stack development to be the perfect tool to complete this job. What does
+  this mean? I can write front-end and back-end code for your websites and bring
+  them to life. I have large experience with Angular 2+, and React enterprise
+  applications. On the back-end, using Node.js to interact with databases, APIs,
+  proxies, and file-system interactions.
+
+
+  I personally also designed and wrote this website you are looking at - to
+  display some of my other work.
+
 quotes:
   - author: Albert Einstein
     quote: >-
