@@ -123,11 +123,14 @@ body {
 }
 .row-a-c { 
   @extend .flex-row;
-  align-content: center; }
+  align-items: center; }
 
 .col-a-c {
   @extend .flex-col;
-  align-content: center;
+  align-items: center;
+}
+.j-c {
+  justify-content: center;
 }
 
 // POINTERS

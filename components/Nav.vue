@@ -10,6 +10,7 @@
 
     <div class="right-menu">
       <Primary
+        v-on:click.native="openForm"
         class="reach-out"
         v-bind:type="'primary'"
         v-bind:text="'Reach Out'" />
@@ -45,28 +46,42 @@
         </div>
       </div>
     </div>
+
+    <Contact v-bind:close="closeForm" v-if="formOpen" />
+
+
   </div>
 </template>
 
 <script>
 import Primary from './Primary.vue'
+import Contact from './Contact.vue'
 import Logo from './Logo.vue'
 import SiteData from './../requests/content.js'
 import Caret from '~/static/images/caret-down.svg'
 
 export default {
   props: [ 'bgColor', 'resumeLink'],
-  components: { Primary, Logo, Caret },
+  components: { Primary, Logo, Caret, Contact },
   data: () => ({
     Caret,
     activePage: 'Home',
-    navOpen: false
+    navOpen: false,
+    formOpen: false
   }),
   methods: {
     // Sets the active name of the page. If index, we need to display "Home"
     setActivePage(routeName) {
       this.activePage = routeName === 'index' ? 'Home' 
                                               : routeName;
+    },
+
+    openForm() {
+      this.formOpen = true;
+    },
+
+    closeForm() {
+      this.formOpen = false;
     },
     
     // toggles menu on and off
@@ -186,6 +201,7 @@ export default {
     background: rgba(255,255,255,0.20);
     width: 120px;
   }
+
 }
 
 a, a:hover {
