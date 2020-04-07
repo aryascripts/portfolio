@@ -6,7 +6,7 @@
       </div>
 
 			
-      <form class="form-content col-a-c" name="contact" method="POST" data-netlify="true">
+      <form class="form-content col-a-c" name="contact" method="POST" data-netlify="true" netlify>
 				<p>
 					<label v-bind:class="{show: showLabel[0]}">Name</label>
 					<input 	placeholder="Name"
