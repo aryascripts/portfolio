@@ -7,6 +7,7 @@
 
 			
       <form action="/" class="form-content col-a-c" name="contact" method="POST" data-netlify="true" netlify>
+				<input type="hidden" name="form-name" value="contact" />
 				<p>
 					<label v-bind:class="{show: showLabel[0]}">Name</label>
 					<input 	placeholder="Name"
