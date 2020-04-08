@@ -27,7 +27,19 @@ class SiteData {
   }
   getAllProjects() {
     return this.projects
-            .sort((p1, p2) => p1.order - p2.order);
+            .sort((p1, p2) => p1.order - p2.order)
+  }
+
+  getRandomQuote() {
+    const max = this.site.quotes.length;
+    if (max) {
+      const ran = Math.floor((Math.random() * max))
+      const quote = this.site.quotes[ran]
+      return `${quote.quote} -${quote.author}`
+    }
+    else {
+      return 'If you cannot do great things, do small things in a great way. - Napoleon Hill'
+    }
   }
 }
 

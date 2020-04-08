@@ -9,7 +9,7 @@
 
     <div class="quote-box">
       <div class="quote">
-        “If a cluttered desk is a sign of a <span>cluttered mind</span>, of what, then, is an empty desk a sign?”
+        {{ quote }}
       </div>
     </div>
 
@@ -23,11 +23,16 @@
 
 <script>
 import Quote from '~/static/images/quote.svg'
+import SiteData from '~/requests/content'
 
 export default {
   data: () => ({
-    Quote
-  })
+    Quote,
+    quote: ''
+  }),
+  mounted() {
+    this.quote = SiteData.getRandomQuote()
+  }
 }
 </script>
 
