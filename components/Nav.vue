@@ -39,11 +39,10 @@
           </nuxt-link>
 
           <div class="item">
-            <a v-bind:href="https://amanscripts.com" target="_blank">
+            <a href="https://amanscripts.com" target="_blank">
             Blog
             </a>
           </div>
-
 
           <div class="item">
             <a v-bind:href="resumeLink" target="_blank">
