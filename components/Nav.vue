@@ -37,9 +37,15 @@
           <nuxt-link to="/work" class="item">
             Work
           </nuxt-link>
+         
+          <div class="item">
+            <a href="https://www.youtube.com/channel/UC1DIqOKaLSRAMngq9yoayzQ" target="_blank">
+            YouTube
+            </a>
+          </div>
 
           <div class="item">
-            <a href="https://amanscripts.com" target="_blank">
+            <a href="http://amanscripts.medium.com" target="_blank">
             Blog
             </a>
           </div>
