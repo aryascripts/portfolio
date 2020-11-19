@@ -6,7 +6,10 @@
       </div>
 
 			
-      <form action="/" class="form-content col-a-c" name="contact" method="POST" data-netlify="true" netlify>
+      <form action="/" class="form-content col-a-c" 
+	  		name="contact" method="POST"
+			data-netlify-recaptcha="true"
+			data-netlify="true" netlify>
 				<input type="hidden" name="form-name" value="contact" />
 				<p>
 					<label v-bind:class="{show: showLabel[0]}">Name</label>
@@ -32,6 +35,7 @@
 									@focus="toggleMessage"
 									@blur="toggleMessage"></textarea>
         </p>
+				<div data-netlify-recaptcha="true"></div>
         <p>
           <button class="pointer" type="submit">Send</button>
         </p>
