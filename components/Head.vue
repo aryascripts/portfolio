@@ -148,7 +148,8 @@
 
 .head-section {
   width: 100%;
-  height: 93vh;
+  height: 100vh;
+  min-height: -webkit-fill-available;
 
   display: flex;
   flex-direction: column;
