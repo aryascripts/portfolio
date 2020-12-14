@@ -1,43 +1,20 @@
 {
-  "name": "aman-portfolio",
-  "version": "0.2.0",
-  "description": "Aman Bhimani's portfolio hosted on amanbhimani.com",
-  "author": "Aman Bhimani <amanb014@gmail.com>",
+  "name": "learn-starter",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run generate-content && nuxt --port 3002",
-    "build": "npm run generate-content && nuxt build",
-    "start": "npm run generate-content && nuxt build && nuxt start",
-    "generate": "npm run generate-content && nuxt generate",
-    "generate-content": "node requests/index.js",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.7",
-    "@nuxtjs/markdownit": "^1.2.9",
-    "ajv": "^6.12.0",
-    "axios": "^0.18.1",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.17.1",
-    "fast-xml-parser": "^3.16.0",
-    "lodash.unescape": "^4.0.1",
-    "nuxt": "^2.12.2",
-    "vue-scrollto": "^2.17.1",
-    "xmldom": "^0.1.31",
-    "yamljs": "^0.3.0"
+    "next": "^10.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "coffee-loader": "^0.9.0",
-    "coffeescript": "^2.5.1",
-    "eslint": "^4.15.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.13.1",
-    "pug": "^2.0.4",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.3.1"
+    "@types/node": "^14.14.13",
+    "@types/react": "^17.0.0",
+    "typescript": "^4.1.3"
   }
 }
