@@ -1,9 +1,7 @@
 <template>
-  <div class="background">
+  <SlantWrap>
 
-    <div class="container padding">
-      <h1>{{ title }}</h1>
-    </div>
+    <Title v-bind:text="title" />
 
     <Collection
       class="max-width"
@@ -16,35 +14,27 @@
         v-bind:type="'secondary'"
         v-bind:link="'work'"
         v-bind:text="'View All Projects'" />
-  </div>
+  </SlantWrap>
 </template>
 
 <script>
 import Quotes from '~/components/ui/Quotes.vue'
 import Collection from '~/components/lists/Collection.vue'
 import Primary from '~/components/atoms/Primary.vue'
+import Title from '~/components/atoms/Title.vue'
+import SlantWrap from '~/components/wraps/SlantWrap.vue'
 
 export default {
-  components: { Quotes, Primary, Collection },
+  components: { Quotes, Primary, Collection, Title, SlantWrap },
   props: ['projects', 'title', 'showall']
 }
-
 
 </script>
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
-.background {
-  background-color: $white-text;
-  margin-top: -40px;
-  padding: 80px 0;
-  text-align: center;
-
-  @extend %right-down;
-}
 .resume-button {
   margin-top: 30px;
 }
-
 </style>

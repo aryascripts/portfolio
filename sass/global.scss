@@ -1,5 +1,7 @@
-@import './vars.scss';
-.pointer { cursor: pointer; }
+@import "./vars.scss";
+.pointer {
+  cursor: pointer;
+}
 
 h1 {
   @extend %font;
@@ -72,16 +74,26 @@ ul {
   color: $green-hover;
 }
 
-
-.page-enter-active, .page-leave-active {
+.page-enter-active,
+.page-leave-active {
   @include transition(opacity 300ms);
 }
-.page-enter, .page-leave-to {
+.page-enter,
+.page-leave-to {
   opacity: 0;
 }
 
 body {
   background-color: $body-bg;
+}
+
+.background {
+  background-color: $white-text;
+  margin-top: -40px;
+  padding: 80px 0;
+  text-align: center;
+
+  @extend %right-down;
 }
 
 .max-width {
@@ -111,19 +123,22 @@ body {
   transition: $args;
 }
 
-
 // GENERIC
-.flex { display: flex; }
-.flex-row { 
-  @extend .flex; 
-  flex-direction: row; }
+.flex {
+  display: flex;
+}
+.flex-row {
+  @extend .flex;
+  flex-direction: row;
+}
 .flex-col {
   @extend .flex;
   flex-direction: column;
 }
-.row-a-c { 
+.row-a-c {
   @extend .flex-row;
-  align-items: center; }
+  align-items: center;
+}
 
 .col-a-c {
   @extend .flex-col;
@@ -134,4 +149,6 @@ body {
 }
 
 // POINTERS
-.pointer { cursor: pointer; }
+.pointer {
+  cursor: pointer;
+}

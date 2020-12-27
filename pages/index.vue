@@ -5,6 +5,8 @@
       <Head v-bind:config="{ title: title, name: name }" />
     </div>
 
+    <Media />
+
     <Featured v-bind:title="'FEATURED WORK'" v-bind:projects="featured" />
   </div>
 </template>
@@ -14,12 +16,14 @@ import Head from "~/components/ui/Head.vue";
 import Featured from "~/components/Featured.vue";
 import SiteData from "~/requests/content.js";
 import Nav from "~/components/ui/Nav.vue";
+import Media from '~/components/lists/Media.vue';
 
 export default {
   components: {
     Head,
     Featured,
-    Nav
+    Nav,
+    Media
   },
   async asyncData() {
     return {

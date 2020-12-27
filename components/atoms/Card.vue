@@ -13,8 +13,6 @@
     class="background">
 
     </div>
-
-
   </div>
 
 </template>
