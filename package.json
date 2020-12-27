@@ -6,16 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "generate-content": "node requests/index.js",
     "export": "next export"
   },
   "dependencies": {
+    "@headlessui/react": "^0.2.0",
+    "animejs": "^3.2.1",
     "autoprefixer": "^10.1.0",
+    "axios": "^0.21.1",
     "classcat": "^4.1.0",
+    "fast-xml-parser": "^3.17.6",
+    "markdown-it": "^12.0.4",
     "next": "10.0.1",
     "postcss": "^8.2.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "tailwindcss": "^2.0.2"
+    "sass": "^1.30.0",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.13",
