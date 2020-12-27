@@ -32,7 +32,7 @@ export default {
 
 <style scoped lang="scss">
 
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .container {
   padding: 120px 0;

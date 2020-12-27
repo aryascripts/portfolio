@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
   .card {
     min-height: 200px;

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Card from './Card.vue'
+import Card from '~/components/atoms/Card.vue';
 
 export default {
   components: { Card },
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .collection {
   display: flex;

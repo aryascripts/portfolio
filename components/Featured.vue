@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import Quotes from './Quotes.vue'
-import Collection from './Collection.vue'
-import Primary from './Primary.vue'
+import Quotes from '~/components/ui/Quotes.vue'
+import Collection from '~/components/lists/Collection.vue'
+import Primary from '~/components/atoms/Primary.vue'
 
 export default {
   components: { Quotes, Primary, Collection },

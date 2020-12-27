@@ -38,7 +38,7 @@ export default {
 
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .quote-container {
   width: 90vw;
