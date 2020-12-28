@@ -22,6 +22,11 @@ h2 {
   margin-top: 12px;
 }
 
+h3 {
+  @extend h2;
+  color: $head-bg-15;
+}
+
 a {
   background-color: lighten(black, 50%);
   border-radius: 3px;
@@ -94,15 +99,6 @@ body {
   text-align: center;
 
   @extend %right-down;
-}
-
-.max-width {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  @media screen and (max-width: 1000px) {
-    max-width: 94%;
-  }
 }
 
 .content {
