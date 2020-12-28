@@ -1,6 +1,10 @@
 @import "./vars.scss";
 .pointer {
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1 {
@@ -25,6 +29,9 @@ h2 {
 h3 {
   @extend h2;
   color: $head-bg-15;
+  font-size: 1.2rem;
+  text-align: start;
+  text-transform: none;
 }
 
 a {
@@ -58,10 +65,6 @@ hr {
   margin: 0 auto;
 }
 
-.background {
-  width: 100%;
-}
-
 .para {
   color: rgba(0, 0, 0, 0.85);
 }
@@ -90,15 +93,6 @@ ul {
 
 body {
   background-color: $body-bg;
-}
-
-.background {
-  background-color: $white-text;
-  margin-top: -40px;
-  padding: 80px 0;
-  text-align: center;
-
-  @extend %right-down;
 }
 
 .content {

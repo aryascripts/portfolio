@@ -5,6 +5,7 @@
       <Head v-bind:config="{ title: title, name: name }" />
     </div>
 
+
     <MediaList />
 
     <Featured v-bind:title="'FEATURED WORK'" v-bind:projects="featured" />
