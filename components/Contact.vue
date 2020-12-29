@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .contact-form {
   width: 100vw;
@@ -118,8 +118,7 @@ export default {
 				@extend %family;
 				font-weight: 600;
 				opacity: 0;
-				-webkit-transition: opacity 200ms ease-in;
-				transition: opacity 200ms ease-in;
+				@include transition(opacity 200ms ease-in)
 			}
 
 			label.show {

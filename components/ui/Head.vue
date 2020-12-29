@@ -86,7 +86,7 @@
 
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .pic-info {
   z-index: $content-z;
@@ -137,7 +137,7 @@
     width: 180px;
     height: 180px;
     border-radius: 180px;
-    background: url('./../static/aman.jpg');
+    background: url('./../../static/aman.jpg');
     background-size: cover;
     background-position: center;
     position: relative;

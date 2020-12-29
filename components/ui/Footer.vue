@@ -22,7 +22,7 @@
 
 
 <style scoped lang="scss">
-  @import './../sass/vars.scss';
+  @import '~/sass/vars.scss';
 
   %light-font {
     font-family: 'Montserrat', sans-serif;

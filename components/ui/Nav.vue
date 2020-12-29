@@ -66,10 +66,10 @@
 </template>
 
 <script>
-import Primary from './Primary.vue'
-import Contact from './Contact.vue'
-import Logo from './Logo.vue'
-import SiteData from './../requests/content.js'
+import Primary from '~/components/atoms/Primary.vue'
+import Contact from '~/components/Contact.vue'
+import Logo from '~/components/atoms/Logo.vue'
+import SiteData from '~/requests/content.js'
 import Caret from '~/static/images/caret-down.svg'
 
 export default {
@@ -124,7 +124,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .nav {
   width: 100%;
@@ -154,8 +154,7 @@ export default {
     .caret {
       width: 16px;
       margin: 0 0 0 4px;
-      -webkit-transition: transform 200ms ease-in;
-      transition: transform 200ms ease-in;
+      @include transition(transform 200ms ease-in);
     }
   }
 

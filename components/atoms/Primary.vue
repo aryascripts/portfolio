@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './../sass/vars.scss';
+@import '~/sass/vars.scss';
 
 .btn {
   font-size: 16px;

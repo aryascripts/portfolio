@@ -26,8 +26,8 @@
 
 <script>
 import SiteData from '~/requests/content.js'
-import Nav from '~/components/Nav.vue'
-import Paragraph from '~/components/Paragraph.vue'
+import Nav from '~/components/ui/Nav.vue'
+import Paragraph from '~/components/atoms/Paragraph.vue'
 import Featured from '~/components/Featured.vue'
 
 export default {

@@ -1,5 +1,7 @@
-@import './vars.scss';
-.pointer { cursor: pointer; }
+@import "./vars.scss";
+.pointer {
+  cursor: pointer;
+}
 
 h1 {
   @extend %font;
@@ -20,13 +22,26 @@ h2 {
   margin-top: 12px;
 }
 
+h3 {
+  @extend h2;
+  color: $head-bg-15;
+  font-size: 1.2rem;
+  text-align: start;
+  text-transform: none;
+}
+
+h4 {
+  @extend h3;
+  color: $dark-gray;
+}
+
 a {
   background-color: lighten(black, 50%);
   border-radius: 3px;
   color: white;
   text-decoration: none;
   padding: 1px 5px;
-  transition: background-color 250ms linear;
+  @include transition(background-color 250ms linear);
 
   &:hover {
     background-color: lighten(black, 60%);
@@ -51,10 +66,6 @@ hr {
   margin: 0 auto;
 }
 
-.background {
-  width: 100%;
-}
-
 .para {
   color: rgba(0, 0, 0, 0.85);
 }
@@ -72,25 +83,17 @@ ul {
   color: $green-hover;
 }
 
-
-.page-enter-active, .page-leave-active {
+.page-enter-active,
+.page-leave-active {
   @include transition(opacity 300ms);
 }
-.page-enter, .page-leave-to {
+.page-enter,
+.page-leave-to {
   opacity: 0;
 }
 
 body {
   background-color: $body-bg;
-}
-
-.max-width {
-  max-width: 1000px;
-  margin: 0 auto;
-
-  @media screen and (max-width: 1000px) {
-    max-width: 94%;
-  }
 }
 
 .content {
@@ -111,20 +114,25 @@ body {
   transition: $args;
 }
 
-
 // GENERIC
-.flex { display: flex; }
-.flex-row { 
-  @extend .flex; 
-  flex-direction: row; }
+.flex {
+  display: flex;
+}
+.flex-row {
+  @extend .flex;
+  flex-direction: row;
+}
 .flex-col {
   @extend .flex;
   flex-direction: column;
 }
-.row-a-c { 
+.row-a-c {
   @extend .flex-row;
-  align-items: center; }
-
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
 .col-a-c {
   @extend .flex-col;
   align-items: center;
@@ -132,6 +140,3 @@ body {
 .j-c {
   justify-content: center;
 }
-
-// POINTERS
-.pointer { cursor: pointer; }

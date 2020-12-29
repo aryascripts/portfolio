@@ -10,12 +10,10 @@
 
 
 <script>
-import Footer from './../components/Footer.vue'
-import Nav from './../components/Nav.vue'
+import Footer from '~/components/ui/Footer.vue'
 export default {
   components: {
     Footer,
-    Nav
   }
 }
 </script>
