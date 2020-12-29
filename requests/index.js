@@ -15,7 +15,7 @@ async function storeContent() {
   // get goodreads and store JSON
   await storeGoodreadsInfo();
 
-  await getMediumFeed();
+  await getMediaFeed();
 }
 
 async function storeSiteInfo() {
@@ -28,9 +28,32 @@ async function storeSiteInfo() {
   );
 }
 
+async function getMediaFeed() {
+  const media = await Promise.all([getMediumFeed()]);
+  const medium = media[0];
+
+  // get youtube media
+
+  // combine two lists of media
+
+  // sort list based on date
+
+  // slice to only top 15 items
+}
+
 async function getMediumFeed() {
-  const json = await Feed.load("https://medium.com/feed/@AmanScripts");
-  console.log(json);
+  const items = (await Feed.load("https://medium.com/feed/@AmanScripts")).items;
+  return items.map(item => {
+    const split = item.description.split('<img src="');
+    item.image = split[1].split('"')[0];
+    return {
+      title: item.title,
+      link: item.link,
+      date: item.published,
+      type: "Article",
+      img: split[1].split('"')[0]
+    };
+  });
 }
 
 async function storeProjects() {

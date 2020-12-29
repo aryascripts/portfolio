@@ -15,7 +15,6 @@
 export default {
     props: [
         'title',
-        'description',
         'date',
         'link',
         'type',
