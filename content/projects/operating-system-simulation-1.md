@@ -4,7 +4,7 @@ title: Operating System Simulation
 start_date: 2020-04-06T18:38:38.342Z
 end_date: 2020-04-06T18:38:38.361Z
 thumbnail: /images/os.png
-featured: true
+featured: false
 description: >-
   This project accomplished a simulation of the Operating System - including
   CPU, Disk, RAM, Driver, Loader, Pager, and Schedulers. Disk was responsible
@@ -13,7 +13,6 @@ description: >-
   into memory (RAM) from Disk, which are stored and tracked on the Page Table.
 
 
-  Provided a finite amount of tasks to finish, and limited memory, tasks have to
-  be loaded based on a priority-queue, and placed into memory as needed. 
+  Provided a finite amount of tasks to finish, and limited memory, tasks have to be loaded based on a priority-queue, and placed into memory as needed. 
 order: 2
 ---
