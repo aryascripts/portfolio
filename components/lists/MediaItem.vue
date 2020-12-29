@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="media-item pointer">
         <div class="image">
             <img v-on:click="open()" v-if="img" class="thumbnail" v-bind:src="img" />

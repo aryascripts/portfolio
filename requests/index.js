@@ -29,16 +29,20 @@ async function storeSiteInfo() {
 }
 
 async function getMediaFeed() {
-  const media = await Promise.all([getMediumFeed()]);
-  const medium = media[0];
-
-  // get youtube media
+  // get both medial
+  const responses = await Promise.all([getMediumFeed(), getYoutubeFeed()]);
 
   // combine two lists of media
+  const media = [...responses[0], ...responses[1]];
 
   // sort list based on date
+  media.sort((a, b) => b.date - a.date);
 
-  // slice to only top 15 items
+  FilesWorker.WriteJSONToFile(
+    "./../content/media.json",
+    media.slice(0, 15),
+    print.bind(this, "published media.")
+  );
 }
 
 async function getMediumFeed() {
@@ -52,6 +56,26 @@ async function getMediumFeed() {
       date: item.published,
       type: "Article",
       img: split[1].split('"')[0]
+    };
+  });
+}
+
+async function getYoutubeFeed() {
+  const items = (
+    await Feed.load(
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UC1DIqOKaLSRAMngq9yoayzQ"
+    )
+  ).items;
+
+  return items.map(item => {
+    const img = item.enclosures[0];
+    const last = img.lastIndexOf("/");
+    return {
+      img: `${img.slice(0, last)}/maxresdefault.jpg`,
+      title: item.title,
+      date: item.published,
+      type: "Video",
+      link: item.link
     };
   });
 }

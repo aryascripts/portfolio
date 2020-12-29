@@ -6,7 +6,7 @@
     </div>
 
 
-    <MediaList />
+    <MediaList v-bind:items="media" />
 
     <Featured v-bind:title="'FEATURED WORK'" v-bind:projects="featured" />
   </div>
@@ -31,7 +31,8 @@ export default {
       title: SiteData.getTitle(),
       name: SiteData.getName(),
       featured: SiteData.getFeaturedProjects(),
-      resumeLink: SiteData.getResumeLink()
+      resumeLink: SiteData.getResumeLink(),
+      media: SiteData.getMedia()
     };
   }
 };
