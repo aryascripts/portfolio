@@ -118,8 +118,7 @@ export default {
 				@extend %family;
 				font-weight: 600;
 				opacity: 0;
-				-webkit-transition: opacity 200ms ease-in;
-				transition: opacity 200ms ease-in;
+				@include transition(opacity 200ms ease-in)
 			}
 
 			label.show {

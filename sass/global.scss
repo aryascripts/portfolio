@@ -1,10 +1,6 @@
 @import "./vars.scss";
 .pointer {
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 h1 {
@@ -34,13 +30,18 @@ h3 {
   text-transform: none;
 }
 
+h4 {
+  @extend h3;
+  color: $dark-gray;
+}
+
 a {
   background-color: lighten(black, 50%);
   border-radius: 3px;
   color: white;
   text-decoration: none;
   padding: 1px 5px;
-  transition: background-color 250ms linear;
+  @include transition(background-color 250ms linear);
 
   &:hover {
     background-color: lighten(black, 60%);
@@ -129,16 +130,13 @@ body {
   @extend .flex-row;
   align-items: center;
 }
-
+.wrap {
+  flex-wrap: wrap;
+}
 .col-a-c {
   @extend .flex-col;
   align-items: center;
 }
 .j-c {
   justify-content: center;
-}
-
-// POINTERS
-.pointer {
-  cursor: pointer;
 }

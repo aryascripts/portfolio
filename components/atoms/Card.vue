@@ -37,8 +37,6 @@ export default {
     box-sizing: unset;
     overflow: hidden;
     background-position: top center;
-    -webkit-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
     padding: 20px;
 
     @include transition(all 200ms ease-in);

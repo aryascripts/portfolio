@@ -154,8 +154,7 @@ export default {
     .caret {
       width: 16px;
       margin: 0 0 0 4px;
-      -webkit-transition: transform 200ms ease-in;
-      transition: transform 200ms ease-in;
+      @include transition(transform 200ms ease-in);
     }
   }
 
