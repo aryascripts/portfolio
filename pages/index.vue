@@ -5,8 +5,9 @@
       <Head v-bind:config="{ title: title, name: name }" />
     </div>
 
-
     <MediaList v-bind:items="media" />
+
+    <SocialMedia />
 
     <Featured v-bind:title="'FEATURED WORK'" v-bind:projects="featured" />
   </div>
@@ -17,14 +18,16 @@ import Head from "~/components/ui/Head.vue";
 import Featured from "~/components/Featured.vue";
 import SiteData from "~/requests/content.js";
 import Nav from "~/components/ui/Nav.vue";
-import MediaList from '~/components/lists/MediaList.vue';
+import MediaList from "~/components/lists/MediaList.vue";
+import SocialMedia from "~/components/lists/SocialMedia.vue";
 
 export default {
   components: {
     Head,
     Featured,
     Nav,
-    MediaList
+    MediaList,
+    SocialMedia,
   },
   async asyncData() {
     return {
@@ -32,9 +35,9 @@ export default {
       name: SiteData.getName(),
       featured: SiteData.getFeaturedProjects(),
       resumeLink: SiteData.getResumeLink(),
-      media: SiteData.getMedia()
+      media: SiteData.getMedia(),
     };
-  }
+  },
 };
 </script>
 

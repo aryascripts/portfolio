@@ -1,18 +1,17 @@
 <template>
-    <div class="background">
-        <slot></slot>
-    </div>
+  <div class="background">
+    <slot></slot>
+  </div>
 </template>
 
 
 <style scoped lang="scss">
-@import '~/sass/vars.scss';
+@import "~/sass/vars.scss";
 
 .background {
   background-color: $white-text;
   margin-top: -40px;
-  padding: 80px 0;
-//   text-align: center;
+  padding: 50px 0;
 
   @extend %right-down;
 }
