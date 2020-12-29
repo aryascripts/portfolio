@@ -1,58 +1,51 @@
 <template>
   <div>
-
     <div class="head-nav">
-      <Nav
-        v-bind:resumeLink="resumeLink"
-        v-bind:bgColor="'#316097'"/>
+      <Nav v-bind:resumeLink="resumeLink" v-bind:bgColor="'#316097'" />
 
       <Paragraph
         v-bind:title="'GETTING PERSONAL'"
         v-bind:noSlant="true"
-        v-bind:text="about"/>
-
+        v-bind:text="about"
+      />
     </div>
 
     <div class="background slant">
       <h1>READING & LEARNING</h1>
       <div class="book-lists">
-        <BookList
-          v-bind:title="'Currently Reading'"
-          v-bind:books="current" />
+        <BookList v-bind:title="'Currently Reading'" v-bind:books="current" />
 
-        <BookList
-          v-bind:title="'Favorite Books'"
-          v-bind:books="favs" />
+        <BookList v-bind:title="'Favorite Books'" v-bind:books="favs" />
       </div>
 
+      <SocialMedia />
     </div>
-
   </div>
 </template>
 
 <script>
-import SiteData from '~/requests/content.js'
-import Nav from '~/components/ui/Nav.vue'
-import Paragraph from '~/components/atoms/Paragraph.vue'
-import Featured from '~/components/Featured.vue'
-import BookList from '~/components/lists/BookList.vue'
+import SiteData from "~/requests/content.js";
+import Nav from "~/components/ui/Nav.vue";
+import Paragraph from "~/components/atoms/Paragraph.vue";
+import Featured from "~/components/Featured.vue";
+import BookList from "~/components/lists/BookList.vue";
+import SocialMedia from "~/components/lists/SocialMedia.vue";
 
 export default {
-  components: { Nav, Paragraph, Featured, BookList },
+  components: { Nav, Paragraph, Featured, BookList, SocialMedia },
   async asyncData() {
     return {
       about: SiteData.getAboutPagePara(),
       current: SiteData.getCurrentlyReading(),
       favs: SiteData.getFavoriteBooks(),
-      resumeLink: SiteData.getResumeLink()
-    }
-  }
-}
+      resumeLink: SiteData.getResumeLink(),
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
-@import '~/sass/vars.scss';
-
+@import "~/sass/vars.scss";
 
 .background {
   background-color: $white-text;
@@ -71,5 +64,4 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 </style>
