@@ -87,10 +87,15 @@ $tag-m: 12px;
         border-radius: 0 0 $r $r;
         background-color: #FEFAFA;
         padding: 5px 8px;
+        max-height: 50px;
+        word-break: break-word;
+        white-space: pre-line;
+        overflow: hidden;
 
         h4 {
             margin-top: 0;
             width: inherit;
+            line-height: 22px;
         }
     }
 }
