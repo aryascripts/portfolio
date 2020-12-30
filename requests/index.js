@@ -38,6 +38,8 @@ async function getMediaFeed() {
   // sort list based on date
   media.sort((a, b) => b.date - a.date);
 
+  console.log(media);
+
   FilesWorker.WriteJSONToFile(
     "./../content/media.json",
     media.slice(0, 15),
@@ -70,10 +72,11 @@ async function getYoutubeFeed() {
   return items.map(item => {
     const img = item.enclosures[0];
     const last = img.lastIndexOf("/");
+    console.log(item);
     return {
       img: `${img.slice(0, last)}/maxresdefault.jpg`,
       title: item.title,
-      date: item.published,
+      date: item.created,
       type: "Video",
       link: item.link
     };
