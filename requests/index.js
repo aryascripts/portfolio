@@ -38,8 +38,6 @@ async function getMediaFeed() {
   // sort list based on date
   media.sort((a, b) => b.date - a.date);
 
-  console.log(media);
-
   FilesWorker.WriteJSONToFile(
     "./../content/media.json",
     media.slice(0, 15),
@@ -50,14 +48,16 @@ async function getMediaFeed() {
 async function getMediumFeed() {
   const items = (await Feed.load("https://medium.com/feed/@AmanScripts")).items;
   return items.map(item => {
-    const split = item.description.split('<img src="');
-    item.image = split[1].split('"')[0];
+    const description = item.description || item.content;
+    const descriptionSplit = description.split("<img ")[1];
+    const src = descriptionSplit.split('src="')[1];
+    item.image = src.split('"')[0];
     return {
       title: item.title,
       link: item.link,
       date: item.published,
       type: "Article",
-      img: split[1].split('"')[0]
+      img: item.image
     };
   });
 }
@@ -72,7 +72,6 @@ async function getYoutubeFeed() {
   return items.map(item => {
     const img = item.enclosures[0];
     const last = img.lastIndexOf("/");
-    console.log(item);
     return {
       img: `${img.slice(0, last)}/maxresdefault.jpg`,
       title: item.title,
