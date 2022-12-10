@@ -19,7 +19,7 @@
     "ajv": "^6.12.0",
     "axios": "^0.18.1",
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fast-xml-parser": "^3.16.0",
     "lodash.unescape": "^4.0.1",
     "nuxt": "^2.12.2",
